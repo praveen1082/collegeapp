@@ -418,6 +418,8 @@ class Home extends StatelessWidget {
                       child: Container(
                         decoration: const BoxDecoration(
                             color: Colors.white,
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(10.0)),
                             boxShadow: [
                               BoxShadow(
                                   color: Colors.grey,
