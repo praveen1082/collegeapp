@@ -54,7 +54,10 @@ class _ContainerPageState extends State<ContainerPage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          titleSpacing: 0,
+          actions: [IconButton(onPressed: () {}, icon: Icon(Icons.more_vert))],
+          elevation: 0,
+          backgroundColor: Colors.blue[900],
+          titleSpacing: 10.0,
           title: Text(widget.title),
         ),
         drawer: drawerWidget(),
@@ -98,9 +101,7 @@ class _ContainerPageState extends State<ContainerPage> {
               },
             ),
           ),
-          const Divider(
-            height: 10.0,
-          ),
+          const Divider(),
           const ListTile(
             leading: Icon(Icons.contact_page),
             title: Text("Contact us"),

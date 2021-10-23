@@ -10,10 +10,10 @@ class KcmitApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.blue),
-      home: const ContainerPage(title: "KCMITians",bodyPart: Text("Hello world from praveen panta")),
+      home: ContainerPage(
+          title: "KCMITians", bodyPart: Text("Hello world from praveen panta")),
     );
   }
 }

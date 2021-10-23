@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -9,10 +10,38 @@ class Home extends StatelessWidget {
       shrinkWrap: true,
       children: [
         Container(
-            height: 220.0,
+            height: 240.0,
             width: double.infinity,
+            child: ImageSlideshow(
+                autoPlayInterval: 5000,
+                isLoop: true,
+                indicatorColor: Colors.white,
+                indicatorBackgroundColor: Colors.grey,
+                initialPage: 0,
+                children: [
+                  Image.network(
+                    'https://www.kcmit.edu.np/Uploads/f2Large20190517125252.jpg',
+                    fit: BoxFit.fill,
+                  ),
+                  Image.network(
+                      'https://thevakundo.com//backgrounds/1612852551201-21314515_1683140608423684_6516670562062458749_n.png',
+                      fit: BoxFit.fill),
+                  Image.network(
+                      'http://kcmit.edu.np/kcmit_result/images/college.JPG',
+                      fit: BoxFit.fill),
+                  Image.network(
+                    'https://www.kcmit.edu.np/Uploads/f2Large20190517125252.jpg',
+                    fit: BoxFit.fill,
+                  ),
+                  Image.network(
+                      'https://thevakundo.com//backgrounds/1612852551201-21314515_1683140608423684_6516670562062458749_n.png',
+                      fit: BoxFit.fill),
+                  Image.network(
+                      'http://kcmit.edu.np/kcmit_result/images/college.JPG',
+                      fit: BoxFit.fill),
+                ]),
             decoration: const BoxDecoration(
-              color: Colors.amber,
+              color: Colors.white,
             )),
         Container(
           height: 110.0,
@@ -62,9 +91,11 @@ class Home extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.end,
                             children: const [
                               Text(
-                                "Notice",
+                                "Faculty",
                                 style: TextStyle(
-                                    fontSize: 14.0, color: Colors.deepOrange),
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 14.0,
+                                    color: Colors.deepOrange),
                               )
                             ],
                           ),
@@ -74,7 +105,7 @@ class Home extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(
-                  width: 15.0,
+                  width: 10.0,
                 ),
                 Expanded(
                   child: Container(
@@ -103,9 +134,11 @@ class Home extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.end,
                             children: const [
                               Text(
-                                "Notice",
+                                "Contact Us",
                                 style: TextStyle(
-                                    fontSize: 14.0, color: Colors.deepOrange),
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 14.0,
+                                    color: Colors.deepOrange),
                               )
                             ],
                           ),
@@ -115,7 +148,7 @@ class Home extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(
-                  width: 15.0,
+                  width: 10.0,
                 ),
                 Expanded(
                   child: Container(
@@ -144,9 +177,11 @@ class Home extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.end,
                             children: const [
                               Text(
-                                "Notice",
+                                "Calendar",
                                 style: TextStyle(
-                                    fontSize: 14.0, color: Colors.deepOrange),
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 14.0,
+                                    color: Colors.deepOrange),
                               )
                             ],
                           ),
@@ -381,7 +416,7 @@ class Home extends StatelessWidget {
           height: 15,
         ),
         Container(
-          color: Colors.blue[800],
+          color: Colors.blue[900],
           height: 50.0,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15.0),
@@ -407,30 +442,67 @@ class Home extends StatelessWidget {
         Expanded(
           child: ListView.builder(
               shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               itemCount: 3,
               itemBuilder: (context, index) {
                 return Column(
                   children: [
                     Padding(
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 6.0, vertical: 5.0),
+                          horizontal: 5.0, vertical: 5.0),
                       child: Container(
-                        decoration: const BoxDecoration(
-                            color: Colors.white,
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(10.0)),
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Colors.grey,
-                                  offset: Offset(0.0, 1.0),
-                                  blurRadius: 3.0)
-                            ]),
-                        child: const ListTile(
-                          title: Text("Hello World "),
-                          subtitle: Text("Hello world"),
-                        ),
-                      ),
+                          // height: 60.0,
+                          decoration: const BoxDecoration(
+                              color: Colors.white,
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10.0)),
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Colors.grey,
+                                    offset: Offset(0.0, 1.0),
+                                    blurRadius: 3.0)
+                              ]),
+                          child: Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: Column(
+                              children: [
+                                const SizedBox(
+                                  height: 5.0,
+                                ),
+                                Row(
+                                  children: const [
+                                    Expanded(
+                                      child: Text(
+                                        "Board Exam Routine Published ",
+                                        style: TextStyle(
+                                            fontSize: 16.0,
+                                            fontWeight: FontWeight.w600),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                                const SizedBox(
+                                  height: 15.0,
+                                ),
+                                Row(
+                                  children: const [
+                                    Expanded(
+                                      child: Text(
+                                        "29 Sep 2021",
+                                        style: TextStyle(
+                                            color: Colors.deepOrange,
+                                            fontSize: 14.0,
+                                            fontWeight: FontWeight.w500),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(
+                                  height: 5.0,
+                                )
+                              ],
+                            ),
+                          )),
                     ),
                   ],
                 );
