@@ -378,7 +378,64 @@ class Home extends StatelessWidget {
           ),
         ),
         const SizedBox(
-          height: 10,
+          height: 15,
+        ),
+        Container(
+          color: Colors.blue[800],
+          height: 50.0,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: const [
+                Text(
+                  "RECENT NOTICES",
+                  style: TextStyle(
+                      fontSize: 18.0,
+                      fontStyle: FontStyle.italic,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.white),
+                )
+              ],
+            ),
+          ),
+        ),
+        const SizedBox(
+          height: 5.0,
+        ),
+        Expanded(
+          child: ListView.builder(
+              shrinkWrap: true,
+              physics: NeverScrollableScrollPhysics(),
+              itemCount: 3,
+              itemBuilder: (context, index) {
+                return Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 6.0, vertical: 5.0),
+                      child: Container(
+                        decoration: const BoxDecoration(
+                            color: Colors.white,
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey,
+                                  offset: Offset(0.0, 1.0),
+                                  blurRadius: 3.0)
+                            ]),
+                        child: const ListTile(
+                          title: Text("Hello World "),
+                          subtitle: Text("Hello world"),
+                        ),
+                      ),
+                    ),
+                  ],
+                );
+              }),
+        ),
+        const SizedBox(
+          height: 2.0,
         ),
       ],
     );
