@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kcmitapp/pages/home.dart';
 
 class ContainerPage extends StatefulWidget {
   final title;
@@ -56,51 +57,55 @@ class _ContainerPageState extends State<ContainerPage> {
           titleSpacing: 0,
           title: Text(widget.title),
         ),
-        drawer: Drawer(
-          child: Column(
-            children: [
-              const UserAccountsDrawerHeader(
-                accountName: Text("Praveen Panta"),
-                accountEmail: Text("praveenpanta1082@gmail.com"),
-                currentAccountPicture: CircleAvatar(
-                  backgroundColor: Colors.orange,
-                  child: Text(
-                    "P",
-                    style: TextStyle(fontSize: 40.0),
-                  ),
-                ),
+        drawer: drawerWidget(),
+        body: Home(),
+      ),
+    );
+  }
+
+  Drawer drawerWidget() {
+    return Drawer(
+      child: Column(
+        children: [
+          const UserAccountsDrawerHeader(
+            accountName: Text("Praveen Panta"),
+            accountEmail: Text("praveenpanta1082@gmail.com"),
+            currentAccountPicture: CircleAvatar(
+              backgroundColor: Colors.orange,
+              child: Text(
+                "P",
+                style: TextStyle(fontSize: 40.0),
               ),
-              Expanded(
-                child: ListView.builder(
-                  shrinkWrap: true,
-                  itemCount: drawerlist.length,
-                  itemBuilder: (context, index) {
-                    return Container(
-                      //height: double.infinity,
-                      child: ListTile(
-                        leading: Icon(icon[index]),
-                        title: Text(drawerlist[index]),
-                        onTap: () {
-                          setState(() {
-                            _selected++;
-                          });
-                        },
-                      ),
-                    );
-                  },
-                ),
-              ),
-              const Divider(
-                height: 10.0,
-              ),
-              const ListTile(
-                leading: Icon(Icons.contact_page),
-                title: Text("Contact us"),
-              )
-            ],
+            ),
           ),
-        ),
-        body: _selected == 0 ? Text("Hello world") : Text("Unknown"),
+          Expanded(
+            child: ListView.builder(
+              shrinkWrap: true,
+              itemCount: drawerlist.length,
+              itemBuilder: (context, index) {
+                return Container(
+                  //height: double.infinity,
+                  child: ListTile(
+                    leading: Icon(icon[index]),
+                    title: Text(drawerlist[index]),
+                    onTap: () {
+                      setState(() {
+                        _selected++;
+                      });
+                    },
+                  ),
+                );
+              },
+            ),
+          ),
+          const Divider(
+            height: 10.0,
+          ),
+          const ListTile(
+            leading: Icon(Icons.contact_page),
+            title: Text("Contact us"),
+          )
+        ],
       ),
     );
   }
