@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
+import 'package:kcmitapp/pages/notice.dart';
+import 'package:kcmitapp/pages/resources.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -20,25 +22,19 @@ class Home extends StatelessWidget {
                 initialPage: 0,
                 children: [
                   Image.network(
-                    'https://www.kcmit.edu.np/Uploads/f2Large20190517125252.jpg',
+                    'https://images.unsplash.com/20/cambridge.JPG?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dW5pdmVyc2l0eXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80',
                     fit: BoxFit.fill,
                   ),
                   Image.network(
-                      'https://thevakundo.com//backgrounds/1612852551201-21314515_1683140608423684_6516670562062458749_n.png',
+                      'https://static.onecms.io/wp-content/uploads/sites/28/2017/03/georgia-berry-college-PRETTYCAMPUS0317.jpg',
                       fit: BoxFit.fill),
                   Image.network(
-                      'http://kcmit.edu.np/kcmit_result/images/college.JPG',
+                      'https://marvel-b1-cdn.bc0a.com/f00000000164722/www.udel.edu/content/udel/en/academics/colleges/_jcr_content/par_udel_panel/columngenerator_163104828/par/columngenerator/par_0/image.img.jpg/1565103752196.jpg',
                       fit: BoxFit.fill),
                   Image.network(
-                    'https://www.kcmit.edu.np/Uploads/f2Large20190517125252.jpg',
+                    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Trinity_College_-_Great_Court_02.jpg/1200px-Trinity_College_-_Great_Court_02.jpg',
                     fit: BoxFit.fill,
                   ),
-                  Image.network(
-                      'https://thevakundo.com//backgrounds/1612852551201-21314515_1683140608423684_6516670562062458749_n.png',
-                      fit: BoxFit.fill),
-                  Image.network(
-                      'http://kcmit.edu.np/kcmit_result/images/college.JPG',
-                      fit: BoxFit.fill),
                 ]),
             decoration: const BoxDecoration(
               color: Colors.white,
@@ -65,25 +61,33 @@ class Home extends StatelessWidget {
               children: [
                 Expanded(
                   child: Container(
-                    height: 110.0,
-                    color: Colors.white,
+                    //height: 110.0,
+                    decoration: const BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                      // boxShadow: [
+                      //   BoxShadow(
+                      //       color: Colors.grey,
+                      //       offset: Offset(1.0, 0.0),
+                      //       blurRadius: 2.0)
+                      // ],
+                    ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         Expanded(
+                          flex: 5,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Icon(
-                                Icons.accessible_forward_sharp,
-                                size: 70.0,
+                            children: [
+                              Image.network(
+                                'https://cdn.pngsumo.com/classroom-professor-teacher-teaching-tutor-icon-professor-teaching-png-512_512.png',
+                                //height: 120.0,
+                                fit: BoxFit.fill,
                               ),
                             ],
                           ),
-                        ),
-                        const SizedBox(
-                          height: 30.0,
                         ),
                         Expanded(
                           child: Row(
@@ -95,7 +99,7 @@ class Home extends StatelessWidget {
                                 style: TextStyle(
                                     fontWeight: FontWeight.w400,
                                     fontSize: 14.0,
-                                    color: Colors.deepOrange),
+                                    color: Colors.grey),
                               )
                             ],
                           ),
@@ -109,24 +113,32 @@ class Home extends StatelessWidget {
                 ),
                 Expanded(
                   child: Container(
-                    height: 110.0,
-                    color: Colors.white,
+                    // height: 110.0,
+                    decoration: const BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                      // boxShadow: [
+                      //   BoxShadow(
+                      //       color: Colors.grey,
+                      //       offset: Offset(1.0, 0.0),
+                      //       blurRadius: 2.0)
+                      // ],
+                    ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Expanded(
+                          flex: 5,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Icon(
-                                Icons.accessible_forward_sharp,
-                                size: 70.0,
+                            children: [
+                              Image.network(
+                                'https://cdn1.iconfinder.com/data/icons/phone-call-3/400/Calls-18-512.png',
+                                //height: 120.0,
+                                fit: BoxFit.fill,
                               ),
                             ],
                           ),
-                        ),
-                        const SizedBox(
-                          height: 30.0,
                         ),
                         Expanded(
                           child: Row(
@@ -138,7 +150,7 @@ class Home extends StatelessWidget {
                                 style: TextStyle(
                                     fontWeight: FontWeight.w400,
                                     fontSize: 14.0,
-                                    color: Colors.deepOrange),
+                                    color: Colors.grey),
                               )
                             ],
                           ),
@@ -152,24 +164,32 @@ class Home extends StatelessWidget {
                 ),
                 Expanded(
                   child: Container(
-                    height: 110.0,
-                    color: Colors.white,
+                    // height: 110.0,
+                    decoration: const BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                      // boxShadow: [
+                      //   BoxShadow(
+                      //       color: Colors.grey,
+                      //       offset: Offset(1.0, 0.0),
+                      //       blurRadius: 2.0)
+                      // ],
+                    ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Expanded(
+                          flex: 5,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Icon(
-                                Icons.accessible_forward_sharp,
-                                size: 70.0,
+                            children: [
+                              Image.network(
+                                'https://static.vecteezy.com/system/resources/previews/002/208/100/original/calendar-rgb-color-icon-vector.jpg',
+                                //height: 120.0,
+                                fit: BoxFit.fill,
                               ),
                             ],
                           ),
-                        ),
-                        const SizedBox(
-                          height: 30.0,
                         ),
                         Expanded(
                           child: Row(
@@ -181,7 +201,7 @@ class Home extends StatelessWidget {
                                 style: TextStyle(
                                     fontWeight: FontWeight.w400,
                                     fontSize: 14.0,
-                                    color: Colors.deepOrange),
+                                    color: Colors.grey),
                               )
                             ],
                           ),
@@ -204,102 +224,113 @@ class Home extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Expanded(
-                child: Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      boxShadow: const [
-                        BoxShadow(
-                          color: Colors.grey,
-                          offset: Offset(0.0, 1.0), //(x,y)
-                          blurRadius: 2.0,
-                        ),
-                      ],
-                      borderRadius: BorderRadius.circular(10.0),
-                    ),
-                    height: 130.0,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Expanded(
-                          flex: 2,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Icon(
-                                Icons.accessible_forward_sharp,
-                                size: 100,
-                              ),
-                            ],
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Notice()));
+                  },
+                  child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        boxShadow: const [
+                          BoxShadow(
+                            color: Colors.grey,
+                            offset: Offset(0.0, 1.0), //(x,y)
+                            blurRadius: 2.0,
                           ),
-                        ),
-                        const SizedBox(
-                          height: 30.0,
-                        ),
-                        Expanded(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Text(
-                                "Notice",
-                                style: TextStyle(
-                                    fontSize: 14.0, color: Colors.grey),
-                              )
-                            ],
+                        ],
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      height: 130.0,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Expanded(
+                            flex: 3,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Image.network(
+                                  'https://icons.iconarchive.com/icons/grafikartes/flat-retro-modern/512/messages-icon.png',
+                                  //height: 120.0,
+                                  fit: BoxFit.fill,
+                                ),
+                              ],
+                            ),
                           ),
-                        )
-                      ],
-                    )),
+                          // const SizedBox(
+                          //   height: 30.0,
+                          // ),
+                          Expanded(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: const [
+                                Text(
+                                  "Notice",
+                                  style: TextStyle(
+                                      fontSize: 14.0, color: Colors.grey),
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      )),
+                ),
               ),
               const SizedBox(
                 height: 10,
                 width: 10,
               ),
               Expanded(
-                child: Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      boxShadow: const [
-                        BoxShadow(
-                          color: Colors.grey,
-                          offset: Offset(0.0, 1.0), //(x,y)
-                          blurRadius: 6.0,
-                        ),
-                      ],
-                      borderRadius: BorderRadius.circular(10.0),
-                    ),
-                    height: 130.0,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Expanded(
-                          flex: 2,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Icon(
-                                Icons.accessible_forward_sharp,
-                                size: 100,
-                              ),
-                            ],
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Resources()));
+                  },
+                  child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        boxShadow: const [
+                          BoxShadow(
+                            color: Colors.grey,
+                            offset: Offset(0.0, 1.0), //(x,y)
+                            blurRadius: 6.0,
                           ),
-                        ),
-                        const SizedBox(
-                          height: 30.0,
-                        ),
-                        Expanded(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Text(
-                                "Notice",
-                                style: TextStyle(
-                                    fontSize: 14.0, color: Colors.grey),
-                              )
-                            ],
+                        ],
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      height: 130.0,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Expanded(
+                            flex: 3,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Image.network(
+                                  'http://zucmanlab.com/wp-content/uploads/2018/11/download-1915753_960_720.png',
+                                  height: 120.0,
+                                  fit: BoxFit.fill,
+                                ),
+                              ],
+                            ),
                           ),
-                        )
-                      ],
-                    )),
+                          Expanded(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: const [
+                                Text(
+                                  "Resources",
+                                  style: TextStyle(
+                                      fontSize: 14.0, color: Colors.grey),
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      )),
+                ),
               )
             ],
           ),
@@ -329,26 +360,24 @@ class Home extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Expanded(
-                          flex: 2,
+                          flex: 3,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Icon(
-                                Icons.accessible_forward_sharp,
-                                size: 100,
+                            children: [
+                              Image.network(
+                                'https://icons-for-free.com/iconfiles/png/512/calendar-131964752454737242.png',
+                                //height: 120.0,
+                                fit: BoxFit.fill,
                               ),
                             ],
                           ),
-                        ),
-                        const SizedBox(
-                          height: 30.0,
                         ),
                         Expanded(
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: const [
                               Text(
-                                "Notice",
+                                "Routine",
                                 style: TextStyle(
                                     fontSize: 14.0, color: Colors.grey),
                               )
@@ -363,51 +392,52 @@ class Home extends StatelessWidget {
                 width: 15,
               ),
               Expanded(
-                child: Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      boxShadow: const [
-                        BoxShadow(
-                          color: Colors.grey,
-                          offset: Offset(0.0, 1.0), //(x,y)
-                          blurRadius: 6.0,
-                        ),
-                      ],
-                      borderRadius: BorderRadius.circular(10.0),
-                    ),
-                    height: 130.0,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Expanded(
-                          flex: 2,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Icon(
-                                Icons.accessible_forward_sharp,
-                                size: 100,
-                              ),
-                            ],
+                child: GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        boxShadow: const [
+                          BoxShadow(
+                            color: Colors.grey,
+                            offset: Offset(0.0, 1.0), //(x,y)
+                            blurRadius: 6.0,
                           ),
-                        ),
-                        const SizedBox(
-                          height: 30.0,
-                        ),
-                        Expanded(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Text(
-                                "Notice",
-                                style: TextStyle(
-                                    fontSize: 14.0, color: Colors.grey),
-                              )
-                            ],
+                        ],
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      height: 130.0,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Expanded(
+                            flex: 3,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Image.network(
+                                  'https://cdn4.iconfinder.com/data/icons/got-an-idea/128/discussion-512.png',
+                                  //height: 120.0,
+                                  fit: BoxFit.fill,
+                                ),
+                              ],
+                            ),
                           ),
-                        )
-                      ],
-                    )),
+                          Expanded(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: const [
+                                Text(
+                                  "Discussion",
+                                  style: TextStyle(
+                                      fontSize: 14.0, color: Colors.grey),
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      )),
+                ),
               )
             ],
           ),

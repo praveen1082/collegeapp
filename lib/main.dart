@@ -13,7 +13,8 @@ class KcmitApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: ContainerPage(
-          title: "KCMITians", bodyPart: Text("Hello world from praveen panta")),
+        title: "Home",
+      ),
     );
   }
 }

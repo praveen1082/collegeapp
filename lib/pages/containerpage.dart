@@ -3,8 +3,7 @@ import 'package:kcmitapp/pages/home.dart';
 
 class ContainerPage extends StatefulWidget {
   final title;
-  final bodyPart;
-  const ContainerPage({Key? key, this.title, this.bodyPart}) : super(key: key);
+  const ContainerPage({Key? key, this.title}) : super(key: key);
 
   @override
   _ContainerPageState createState() => _ContainerPageState();
@@ -41,6 +40,7 @@ class _ContainerPageState extends State<ContainerPage> {
     Icons.accessibility_new_sharp,
     Icons.contact_mail,
   ];
+  List _options = ["Share App", "Rate Us", "Disclaimer"];
   dynamic _selected = 0;
   @override
   void initState() {
@@ -54,7 +54,24 @@ class _ContainerPageState extends State<ContainerPage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          actions: [IconButton(onPressed: () {}, icon: Icon(Icons.more_vert))],
+          actions: [
+            PopupMenuButton(
+              itemBuilder: (BuildContext bc) {
+                return _options
+                    .map((options) => PopupMenuItem(
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(options),
+                          ),
+                          value: options,
+                        ))
+                    .toList();
+              },
+              onSelected: (value) {
+                setState(() {});
+              },
+            ),
+          ],
           elevation: 0,
           backgroundColor: Colors.blue[900],
           titleSpacing: 10.0,
@@ -102,6 +119,17 @@ class _ContainerPageState extends State<ContainerPage> {
             ),
           ),
           const Divider(),
+          const Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Align(
+              alignment: Alignment.topLeft,
+              child: Text(
+                "Communicate",
+                style:
+                    TextStyle(fontStyle: FontStyle.italic, color: Colors.grey),
+              ),
+            ),
+          ),
           const ListTile(
             leading: Icon(Icons.contact_page),
             title: Text("Contact us"),
