@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
+import 'package:kcmitapp/UI/pages/contactpage.dart';
+import 'package:kcmitapp/UI/pages/discussion.dart';
+import 'package:kcmitapp/UI/pages/facultypage.dart';
 import 'package:kcmitapp/UI/pages/notice.dart';
 import 'package:kcmitapp/UI/pages/resources.dart';
 
@@ -60,51 +63,122 @@ class Home extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Expanded(
-                  child: Container(
-                    //height: 110.0,
-                    decoration: const BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                      // boxShadow: [
-                      //   BoxShadow(
-                      //       color: Colors.grey,
-                      //       offset: Offset(1.0, 0.0),
-                      //       blurRadius: 2.0)
-                      // ],
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => FacultyPage()));
+                    },
+                    child: Container(
+                      //height: 110.0,
+                      decoration: const BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                        // boxShadow: [
+                        //   BoxShadow(
+                        //       color: Colors.grey,
+                        //       offset: Offset(1.0, 0.0),
+                        //       blurRadius: 2.0)
+                        // ],
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Expanded(
+                            flex: 5,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Expanded(
+                                  child: Image.network(
+                                    'https://cdn.pngsumo.com/classroom-professor-teacher-teaching-tutor-icon-professor-teaching-png-512_512.png',
+                                    //height: 120.0,
+                                    fit: BoxFit.fill,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Expanded(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: const [
+                                Text(
+                                  "Faculty",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 14.0,
+                                      color: Colors.grey),
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        Expanded(
-                          flex: 5,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Image.network(
-                                'https://cdn.pngsumo.com/classroom-professor-teacher-teaching-tutor-icon-professor-teaching-png-512_512.png',
-                                //height: 120.0,
-                                fit: BoxFit.fill,
-                              ),
-                            ],
+                  ),
+                ),
+                const SizedBox(
+                  width: 10.0,
+                ),
+                Expanded(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ContactPage()));
+                    },
+                    child: Container(
+                      // height: 110.0,
+                      decoration: const BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                        // boxShadow: [
+                        //   BoxShadow(
+                        //       color: Colors.grey,
+                        //       offset: Offset(1.0, 0.0),
+                        //       blurRadius: 2.0)
+                        // ],
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Expanded(
+                            flex: 5,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Expanded(
+                                  child: Image.network(
+                                    'https://cdn1.iconfinder.com/data/icons/phone-call-3/400/Calls-18-512.png',
+                                    //height: 120.0,
+                                    fit: BoxFit.fill,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
-                        ),
-                        Expanded(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: const [
-                              Text(
-                                "Faculty",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 14.0,
-                                    color: Colors.grey),
-                              )
-                            ],
-                          ),
-                        )
-                      ],
+                          Expanded(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: const [
+                                Text(
+                                  "Contact Us",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 14.0,
+                                      color: Colors.grey),
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -132,61 +206,12 @@ class Home extends StatelessWidget {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Image.network(
-                                'https://cdn1.iconfinder.com/data/icons/phone-call-3/400/Calls-18-512.png',
-                                //height: 120.0,
-                                fit: BoxFit.fill,
-                              ),
-                            ],
-                          ),
-                        ),
-                        Expanded(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: const [
-                              Text(
-                                "Contact Us",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 14.0,
-                                    color: Colors.grey),
-                              )
-                            ],
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  width: 10.0,
-                ),
-                Expanded(
-                  child: Container(
-                    // height: 110.0,
-                    decoration: const BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                      // boxShadow: [
-                      //   BoxShadow(
-                      //       color: Colors.grey,
-                      //       offset: Offset(1.0, 0.0),
-                      //       blurRadius: 2.0)
-                      // ],
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Expanded(
-                          flex: 5,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Image.network(
-                                'https://static.vecteezy.com/system/resources/previews/002/208/100/original/calendar-rgb-color-icon-vector.jpg',
-                                //height: 120.0,
-                                fit: BoxFit.fill,
+                              Expanded(
+                                child: Image.network(
+                                  'https://static.vecteezy.com/system/resources/previews/002/208/100/original/calendar-rgb-color-icon-vector.jpg',
+                                  //height: 120.0,
+                                  fit: BoxFit.fill,
+                                ),
                               ),
                             ],
                           ),
@@ -246,14 +271,20 @@ class Home extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Expanded(
-                            flex: 3,
+                            flex: 2,
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Image.network(
-                                  'https://icons.iconarchive.com/icons/grafikartes/flat-retro-modern/512/messages-icon.png',
-                                  //height: 120.0,
-                                  fit: BoxFit.fill,
+                                Expanded(
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 8.0, vertical: 2.0),
+                                    child: Image.network(
+                                      'https://icons.iconarchive.com/icons/grafikartes/flat-retro-modern/512/messages-icon.png',
+                                      //height: 120.0,
+                                      fit: BoxFit.fill,
+                                    ),
+                                  ),
                                 ),
                               ],
                             ),
@@ -304,14 +335,20 @@ class Home extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Expanded(
-                            flex: 3,
+                            flex: 2,
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Image.network(
-                                  'http://zucmanlab.com/wp-content/uploads/2018/11/download-1915753_960_720.png',
-                                  height: 120.0,
-                                  fit: BoxFit.fill,
+                                Expanded(
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 8.0, vertical: 2.0),
+                                    child: Image.network(
+                                      'http://zucmanlab.com/wp-content/uploads/2018/11/download-1915753_960_720.png',
+                                      height: 120.0,
+                                      fit: BoxFit.fill,
+                                    ),
+                                  ),
                                 ),
                               ],
                             ),
@@ -370,10 +407,16 @@ class Home extends StatelessWidget {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Image.network(
-                                  'https://icons-for-free.com/iconfiles/png/512/calendar-131964752454737242.png',
-                                  //height: 120.0,
-                                  fit: BoxFit.fill,
+                                Expanded(
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 8.0, vertical: 2.0),
+                                    child: Image.network(
+                                      'https://icons-for-free.com/iconfiles/png/512/calendar-131964752454737242.png',
+                                      //height: 120.0,
+                                      fit: BoxFit.fill,
+                                    ),
+                                  ),
                                 ),
                               ],
                             ),
@@ -400,7 +443,12 @@ class Home extends StatelessWidget {
               ),
               Expanded(
                 child: GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => DiscussioPage()));
+                  },
                   child: Container(
                       decoration: BoxDecoration(
                         color: Colors.white,
@@ -422,10 +470,16 @@ class Home extends StatelessWidget {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Image.network(
-                                  'https://cdn4.iconfinder.com/data/icons/got-an-idea/128/discussion-512.png',
-                                  //height: 120.0,
-                                  fit: BoxFit.fill,
+                                Expanded(
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 8.0, vertical: 2.0),
+                                    child: Image.network(
+                                      'https://cdn4.iconfinder.com/data/icons/got-an-idea/128/discussion-512.png',
+                                      //height: 120.0,
+                                      fit: BoxFit.fill,
+                                    ),
+                                  ),
                                 ),
                               ],
                             ),
@@ -507,6 +561,8 @@ class Home extends StatelessWidget {
                                   height: 5.0,
                                 ),
                                 Row(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: const [
                                     Expanded(
                                       child: Text(
@@ -519,7 +575,7 @@ class Home extends StatelessWidget {
                                   ],
                                 ),
                                 const SizedBox(
-                                  height: 15.0,
+                                  height: 10.0,
                                 ),
                                 Row(
                                   children: const [
