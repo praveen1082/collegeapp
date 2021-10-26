@@ -119,7 +119,10 @@ class MessageDisplay extends StatelessWidget {
                                     children: [
                                       Padding(
                                         padding: const EdgeInsets.all(8.0),
-                                        child: Text("Hello world"),
+                                        child: Text(
+                                          "1:00 am",
+                                          style: TextStyle(fontSize: 12),
+                                        ),
                                       )
                                     ],
                                   )
