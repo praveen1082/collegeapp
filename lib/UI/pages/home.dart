@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
+import 'package:kcmitapp/UI/pages/discussion.dart';
 import 'package:kcmitapp/UI/pages/notice.dart';
 import 'package:kcmitapp/UI/pages/resources.dart';
 
@@ -81,10 +82,12 @@ class Home extends StatelessWidget {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Image.network(
-                                'https://cdn.pngsumo.com/classroom-professor-teacher-teaching-tutor-icon-professor-teaching-png-512_512.png',
-                                //height: 120.0,
-                                fit: BoxFit.fill,
+                              Expanded(
+                                child: Image.network(
+                                  'https://cdn.pngsumo.com/classroom-professor-teacher-teaching-tutor-icon-professor-teaching-png-512_512.png',
+                                  //height: 120.0,
+                                  fit: BoxFit.fill,
+                                ),
                               ),
                             ],
                           ),
@@ -132,10 +135,12 @@ class Home extends StatelessWidget {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Image.network(
-                                'https://cdn1.iconfinder.com/data/icons/phone-call-3/400/Calls-18-512.png',
-                                //height: 120.0,
-                                fit: BoxFit.fill,
+                              Expanded(
+                                child: Image.network(
+                                  'https://cdn1.iconfinder.com/data/icons/phone-call-3/400/Calls-18-512.png',
+                                  //height: 120.0,
+                                  fit: BoxFit.fill,
+                                ),
                               ),
                             ],
                           ),
@@ -183,10 +188,12 @@ class Home extends StatelessWidget {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Image.network(
-                                'https://static.vecteezy.com/system/resources/previews/002/208/100/original/calendar-rgb-color-icon-vector.jpg',
-                                //height: 120.0,
-                                fit: BoxFit.fill,
+                              Expanded(
+                                child: Image.network(
+                                  'https://static.vecteezy.com/system/resources/previews/002/208/100/original/calendar-rgb-color-icon-vector.jpg',
+                                  //height: 120.0,
+                                  fit: BoxFit.fill,
+                                ),
                               ),
                             ],
                           ),
@@ -250,10 +257,12 @@ class Home extends StatelessWidget {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Image.network(
-                                  'https://icons.iconarchive.com/icons/grafikartes/flat-retro-modern/512/messages-icon.png',
-                                  //height: 120.0,
-                                  fit: BoxFit.fill,
+                                Expanded(
+                                  child: Image.network(
+                                    'https://icons.iconarchive.com/icons/grafikartes/flat-retro-modern/512/messages-icon.png',
+                                    //height: 120.0,
+                                    fit: BoxFit.fill,
+                                  ),
                                 ),
                               ],
                             ),
@@ -308,10 +317,12 @@ class Home extends StatelessWidget {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Image.network(
-                                  'http://zucmanlab.com/wp-content/uploads/2018/11/download-1915753_960_720.png',
-                                  height: 120.0,
-                                  fit: BoxFit.fill,
+                                Expanded(
+                                  child: Image.network(
+                                    'http://zucmanlab.com/wp-content/uploads/2018/11/download-1915753_960_720.png',
+                                    height: 120.0,
+                                    fit: BoxFit.fill,
+                                  ),
                                 ),
                               ],
                             ),
@@ -370,10 +381,12 @@ class Home extends StatelessWidget {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Image.network(
-                                  'https://icons-for-free.com/iconfiles/png/512/calendar-131964752454737242.png',
-                                  //height: 120.0,
-                                  fit: BoxFit.fill,
+                                Expanded(
+                                  child: Image.network(
+                                    'https://icons-for-free.com/iconfiles/png/512/calendar-131964752454737242.png',
+                                    //height: 120.0,
+                                    fit: BoxFit.fill,
+                                  ),
                                 ),
                               ],
                             ),
@@ -400,7 +413,12 @@ class Home extends StatelessWidget {
               ),
               Expanded(
                 child: GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => DiscussioPage()));
+                  },
                   child: Container(
                       decoration: BoxDecoration(
                         color: Colors.white,
@@ -422,10 +440,12 @@ class Home extends StatelessWidget {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Image.network(
-                                  'https://cdn4.iconfinder.com/data/icons/got-an-idea/128/discussion-512.png',
-                                  //height: 120.0,
-                                  fit: BoxFit.fill,
+                                Expanded(
+                                  child: Image.network(
+                                    'https://cdn4.iconfinder.com/data/icons/got-an-idea/128/discussion-512.png',
+                                    //height: 120.0,
+                                    fit: BoxFit.fill,
+                                  ),
                                 ),
                               ],
                             ),
