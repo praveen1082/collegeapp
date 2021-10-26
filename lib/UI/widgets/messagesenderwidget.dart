@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:kcmitapp/UI/widgets/messagedisplaywidget.dart';
 
 class MessageSenderWidget extends StatelessWidget {
-  const MessageSenderWidget({Key? key}) : super(key: key);
+  MessageSenderWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    String typedValue;
     TextEditingController messagecontroller = new TextEditingController();
     return Form(
       child: Align(
@@ -26,8 +28,13 @@ class MessageSenderWidget extends StatelessWidget {
                         borderRadius: BorderRadius.all(Radius.circular(4.0))),
                     child: TextFormField(
                       controller: messagecontroller,
-                      decoration: const InputDecoration(
-                          suffixIcon: Icon(Icons.send),
+                      decoration: InputDecoration(
+                          suffixIcon: IconButton(
+                            icon: Icon(Icons.send),
+                            onPressed: () {
+                              typedValue = messagecontroller.text;
+                            },
+                          ),
                           contentPadding: EdgeInsets.symmetric(
                               horizontal: 5.0, vertical: 15.0),
                           border: InputBorder.none,
