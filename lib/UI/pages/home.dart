@@ -253,15 +253,19 @@ class Home extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Expanded(
-                            flex: 3,
+                            flex: 2,
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Expanded(
-                                  child: Image.network(
-                                    'https://icons.iconarchive.com/icons/grafikartes/flat-retro-modern/512/messages-icon.png',
-                                    //height: 120.0,
-                                    fit: BoxFit.fill,
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 8.0, vertical: 2.0),
+                                    child: Image.network(
+                                      'https://icons.iconarchive.com/icons/grafikartes/flat-retro-modern/512/messages-icon.png',
+                                      //height: 120.0,
+                                      fit: BoxFit.fill,
+                                    ),
                                   ),
                                 ),
                               ],
@@ -313,15 +317,19 @@ class Home extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Expanded(
-                            flex: 3,
+                            flex: 2,
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Expanded(
-                                  child: Image.network(
-                                    'http://zucmanlab.com/wp-content/uploads/2018/11/download-1915753_960_720.png',
-                                    height: 120.0,
-                                    fit: BoxFit.fill,
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 8.0, vertical: 2.0),
+                                    child: Image.network(
+                                      'http://zucmanlab.com/wp-content/uploads/2018/11/download-1915753_960_720.png',
+                                      height: 120.0,
+                                      fit: BoxFit.fill,
+                                    ),
                                   ),
                                 ),
                               ],
@@ -382,10 +390,14 @@ class Home extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Expanded(
-                                  child: Image.network(
-                                    'https://icons-for-free.com/iconfiles/png/512/calendar-131964752454737242.png',
-                                    //height: 120.0,
-                                    fit: BoxFit.fill,
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 8.0, vertical: 2.0),
+                                    child: Image.network(
+                                      'https://icons-for-free.com/iconfiles/png/512/calendar-131964752454737242.png',
+                                      //height: 120.0,
+                                      fit: BoxFit.fill,
+                                    ),
                                   ),
                                 ),
                               ],
@@ -441,10 +453,14 @@ class Home extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Expanded(
-                                  child: Image.network(
-                                    'https://cdn4.iconfinder.com/data/icons/got-an-idea/128/discussion-512.png',
-                                    //height: 120.0,
-                                    fit: BoxFit.fill,
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 8.0, vertical: 2.0),
+                                    child: Image.network(
+                                      'https://cdn4.iconfinder.com/data/icons/got-an-idea/128/discussion-512.png',
+                                      //height: 120.0,
+                                      fit: BoxFit.fill,
+                                    ),
                                   ),
                                 ),
                               ],
@@ -527,6 +543,8 @@ class Home extends StatelessWidget {
                                   height: 5.0,
                                 ),
                                 Row(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: const [
                                     Expanded(
                                       child: Text(
@@ -539,7 +557,7 @@ class Home extends StatelessWidget {
                                   ],
                                 ),
                                 const SizedBox(
-                                  height: 15.0,
+                                  height: 10.0,
                                 ),
                                 Row(
                                   children: const [

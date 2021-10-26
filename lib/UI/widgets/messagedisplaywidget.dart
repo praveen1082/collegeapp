@@ -3,7 +3,7 @@ import 'package:kcmitapp/UI/widgets/messagesenderwidget.dart';
 
 class MessageDisplay extends StatelessWidget {
   final sending;
-  MessageDisplay({Key? key, this.sending = false}) : super(key: key);
+  MessageDisplay({Key? key, this.sending = true}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -38,11 +38,17 @@ class MessageDisplay extends StatelessWidget {
                   ),
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                          vertical: 8.0, horizontal: 10.0),
+                      padding:
+                          const EdgeInsets.only(top: 8, bottom: 8, right: 40),
                       child: Container(
                         decoration: BoxDecoration(
-                            color: Colors.blue,
+                            color: Colors.white,
+                            boxShadow: [
+                              BoxShadow(
+                                  blurRadius: 1.0,
+                                  offset: Offset(0.0, 1.0),
+                                  color: Colors.grey)
+                            ],
                             borderRadius:
                                 BorderRadius.all(Radius.circular(10.0))),
                         child: Column(
@@ -62,7 +68,10 @@ class MessageDisplay extends StatelessWidget {
                               children: [
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
-                                  child: Text("Hello world"),
+                                  child: Text(
+                                    "12:45 PM",
+                                    style: TextStyle(fontSize: 12),
+                                  ),
                                 )
                               ],
                             )
@@ -78,21 +87,19 @@ class MessageDisplay extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.end,
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
-                        const Padding(
-                          padding: EdgeInsets.all(5.0),
-                          child: CircleAvatar(
-                            //radius: 20.0,
-                            maxRadius: 25.0,
-                            backgroundColor: Colors.grey,
-                          ),
-                        ),
                         Expanded(
                           child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                                vertical: 8.0, horizontal: 10.0),
+                            padding: const EdgeInsets.only(
+                                top: 8, bottom: 8, left: 40),
                             child: Container(
                               decoration: BoxDecoration(
-                                  color: Colors.blue,
+                                  boxShadow: [
+                                    BoxShadow(
+                                        blurRadius: 1.0,
+                                        offset: Offset(0.0, 1.0),
+                                        color: Colors.grey)
+                                  ],
+                                  color: Colors.grey,
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(10.0))),
                               child: Column(
@@ -119,6 +126,14 @@ class MessageDisplay extends StatelessWidget {
                                 ],
                               ),
                             ),
+                          ),
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.all(5.0),
+                          child: CircleAvatar(
+                            //radius: 20.0,
+                            maxRadius: 25.0,
+                            backgroundColor: Colors.grey,
                           ),
                         ),
                       ],
