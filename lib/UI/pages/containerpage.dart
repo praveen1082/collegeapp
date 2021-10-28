@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kcmitapp/UI/pages/attendancepage.dart';
 import 'package:kcmitapp/UI/pages/home.dart';
 import 'package:kcmitapp/UI/pages/resultpage.dart';
 
@@ -178,6 +179,11 @@ class _ContainerPageState extends State<ContainerPage> {
                           context,
                           MaterialPageRoute(
                               builder: (context) => ResultPage()));
+                    } else if (index == 3) {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => AttendancePage()));
                     }
                     setState(() {
                       _selected++;
