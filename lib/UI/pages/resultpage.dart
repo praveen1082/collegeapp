@@ -192,17 +192,210 @@ class _ResultPageState extends State<ResultPage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
+                  // mainAxisAlignment: MainAxisAlignment.center,
+                  // crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text("Name: Praveen Panta"),
                     SizedBox(
                       height: 10,
                     ),
-                    Text("Symbol No: 7927/17")
+                    Text("Symbol No: 7927/17"),
                   ],
                 ),
               ],
+            ),
+            SizedBox(
+              height: 10.0,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Table(
+                columnWidths: {
+                  0: FlexColumnWidth(),
+                  1: FlexColumnWidth(),
+                  2: FlexColumnWidth()
+                },
+                defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+                //border: TableBorder.all(width: 0.5),
+                children: [
+                  TableRow(
+                      //decoration: Decoration(),
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            children: [
+                              Text("S.N"),
+                            ],
+                          ),
+                        ),
+                        Column(
+                          children: [
+                            Text("Subject"),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Text("GPA Grade"),
+                          ],
+                        )
+                      ]),
+                  TableRow(children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: [
+                          Text("1"),
+                        ],
+                      ),
+                    ),
+                    Column(
+                      children: [
+                        Text("Subject Name"),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Text("3.00"),
+                      ],
+                    )
+                  ]),
+                  TableRow(children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: [
+                          Text("2"),
+                        ],
+                      ),
+                    ),
+                    Column(
+                      children: [
+                        Text("Subject name 2"),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Text("3.18"),
+                      ],
+                    )
+                  ]),
+                  TableRow(children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: [
+                          Text("2"),
+                        ],
+                      ),
+                    ),
+                    Column(
+                      children: [
+                        Text("Subject name 2"),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Text("3.18"),
+                      ],
+                    )
+                  ]),
+                  TableRow(children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: [
+                          Text("2"),
+                        ],
+                      ),
+                    ),
+                    Column(
+                      children: [
+                        Text("Subject name 2"),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Text("3.18"),
+                      ],
+                    )
+                  ]),
+                  TableRow(children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: [
+                          Text("2"),
+                        ],
+                      ),
+                    ),
+                    Column(
+                      children: [
+                        Text("Subject name 2"),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Text("3.18"),
+                      ],
+                    )
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        Text(
+                          "SGPA",
+                          style: TextStyle(fontWeight: FontWeight.w500),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Text("3.06"),
+                      ],
+                    ),
+                    Column(
+                      children: [],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        Text(
+                          "Grade",
+                          style: TextStyle(fontWeight: FontWeight.w500),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Text("B+"),
+                      ],
+                    ),
+                    Column(
+                      children: [],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        Text(
+                          "Remarks",
+                          style: TextStyle(fontWeight: FontWeight.w500),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Text("First Division"),
+                      ],
+                    ),
+                    Column(
+                      children: [],
+                    ),
+                  ]),
+                ],
+              ),
             )
           ],
         ));

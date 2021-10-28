@@ -6,6 +6,7 @@ import 'package:kcmitapp/UI/pages/discussion.dart';
 import 'package:kcmitapp/UI/pages/facultypage.dart';
 import 'package:kcmitapp/UI/pages/notice.dart';
 import 'package:kcmitapp/UI/pages/resources.dart';
+import 'package:kcmitapp/UI/pages/routine.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -629,7 +630,8 @@ showAlertDialog(BuildContext context) {
       style: TextStyle(color: Colors.deepOrange),
     ),
     onPressed: () {
-      Navigator.of(context).pop();
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => RoutinePage()));
     },
   );
   Widget cancelButton = TextButton(
