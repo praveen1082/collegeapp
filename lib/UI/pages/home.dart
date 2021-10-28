@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
+import 'package:kcmitapp/UI/pages/calendarpage.dart';
 import 'package:kcmitapp/UI/pages/contactpage.dart';
 import 'package:kcmitapp/UI/pages/discussion.dart';
 import 'package:kcmitapp/UI/pages/facultypage.dart';
@@ -186,52 +187,60 @@ class Home extends StatelessWidget {
                   width: 10.0,
                 ),
                 Expanded(
-                  child: Container(
-                    // height: 110.0,
-                    decoration: const BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                      // boxShadow: [
-                      //   BoxShadow(
-                      //       color: Colors.grey,
-                      //       offset: Offset(1.0, 0.0),
-                      //       blurRadius: 2.0)
-                      // ],
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Expanded(
-                          flex: 5,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Expanded(
-                                child: Image.network(
-                                  'https://static.vecteezy.com/system/resources/previews/002/208/100/original/calendar-rgb-color-icon-vector.jpg',
-                                  //height: 120.0,
-                                  fit: BoxFit.fill,
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => CalendarPage()));
+                    },
+                    child: Container(
+                      // height: 110.0,
+                      decoration: const BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                        // boxShadow: [
+                        //   BoxShadow(
+                        //       color: Colors.grey,
+                        //       offset: Offset(1.0, 0.0),
+                        //       blurRadius: 2.0)
+                        // ],
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Expanded(
+                            flex: 5,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Expanded(
+                                  child: Image.network(
+                                    'https://static.vecteezy.com/system/resources/previews/002/208/100/original/calendar-rgb-color-icon-vector.jpg',
+                                    //height: 120.0,
+                                    fit: BoxFit.fill,
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
-                        ),
-                        Expanded(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: const [
-                              Text(
-                                "Calendar",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 14.0,
-                                    color: Colors.grey),
-                              )
-                            ],
-                          ),
-                        )
-                      ],
+                          Expanded(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: const [
+                                Text(
+                                  "Calendar",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 14.0,
+                                      color: Colors.grey),
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),
