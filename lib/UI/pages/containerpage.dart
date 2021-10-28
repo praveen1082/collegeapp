@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kcmitapp/UI/pages/home.dart';
+import 'package:kcmitapp/UI/pages/resultpage.dart';
 
 class ContainerPage extends StatefulWidget {
   final title;
@@ -172,6 +173,12 @@ class _ContainerPageState extends State<ContainerPage> {
                   leading: Icon(icon[index]),
                   title: Text(drawerlist[index]),
                   onTap: () {
+                    if (index == 10) {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ResultPage()));
+                    }
                     setState(() {
                       _selected++;
                     });
