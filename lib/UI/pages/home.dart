@@ -25,20 +25,8 @@ class Home extends StatelessWidget {
         ),
         optionsBar(
             context,
-            "Notice",
-            "Resource",
             'https://icons.iconarchive.com/icons/grafikartes/flat-retro-modern/512/messages-icon.png',
             'http://zucmanlab.com/wp-content/uploads/2018/11/download-1915753_960_720.png'),
-        const SizedBox(
-          height: 15,
-        ),
-        optionsBar(
-          context,
-          "Routine",
-          "Discussion",
-          'https://icons-for-free.com/iconfiles/png/512/calendar-131964752454737242.png',
-          'https://cdn4.iconfinder.com/data/icons/got-an-idea/128/discussion-512.png',
-        ),
         const SizedBox(
           height: 15,
         ),
@@ -561,7 +549,7 @@ Widget belowSlider(context) {
   );
 }
 
-Widget optionsBar(context, title1, title2, image1, image2) {
+Widget optionsBar(context, image1, image2) {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 6),
     child: Row(
@@ -581,7 +569,7 @@ Widget optionsBar(context, title1, title2, image1, image2) {
                               title: "Notice",
                             )));
               },
-              child: optionWidget(title1, image1)),
+              child: optionWidget("Notice", image1)),
         ),
         const SizedBox(
           height: 10,
@@ -593,12 +581,143 @@ Widget optionsBar(context, title1, title2, image1, image2) {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => Resources()));
             },
-            child: optionWidget(title2, image2),
+            child: optionWidget("Resource", image2),
           ),
         )
       ],
     ),
   );
+  // const SizedBox(height: 10.0),
+  // Padding(
+  //   padding: const EdgeInsets.symmetric(horizontal: 6),
+  //   child: Row(
+  //     mainAxisAlignment: MainAxisAlignment.center,
+  //     crossAxisAlignment: CrossAxisAlignment.center,
+  //     children: [
+  //       Expanded(
+  //         child: GestureDetector(
+  //           onTap: () {
+  //             showAlertDialog(context);
+  //             // Navigator.push(context,
+  //             //     MaterialPageRoute(builder: (context) => RoutinePage()));
+  //           },
+  //           child: Container(
+  //               decoration: BoxDecoration(
+  //                 color: Colors.white,
+  //                 boxShadow: const [
+  //                   BoxShadow(
+  //                     color: Colors.grey,
+  //                     offset: Offset(0.0, 1.0), //(x,y)
+  //                     blurRadius: 6.0,
+  //                   ),
+  //                 ],
+  //                 borderRadius: BorderRadius.circular(10.0),
+  //               ),
+  //               height: 130.0,
+  //               child: Column(
+  //                 mainAxisAlignment: MainAxisAlignment.center,
+  //                 children: [
+  //                   Expanded(
+  //                     flex: 3,
+  //                     child: Row(
+  //                       mainAxisAlignment: MainAxisAlignment.center,
+  //                       children: [
+  //                         Expanded(
+  //                           child: Padding(
+  //                             padding: const EdgeInsets.symmetric(
+  //                                 horizontal: 8.0, vertical: 2.0),
+  //                             child: Image.network(
+  //                               'https://icons-for-free.com/iconfiles/png/512/calendar-131964752454737242.png',
+  //                               //height: 120.0,
+  //                               fit: BoxFit.contain,
+  //                             ),
+  //                           ),
+  //                         ),
+  //                       ],
+  //                     ),
+  //                   ),
+  //                   Expanded(
+  //                     child: Row(
+  //                       mainAxisAlignment: MainAxisAlignment.center,
+  //                       children: const [
+  //                         Text(
+  //                           "Routine",
+  //                           style: TextStyle(
+  //                               fontSize: 14.0, color: Colors.grey),
+  //                         )
+  //                       ],
+  //                     ),
+  //                   )
+  //                 ],
+  //               )),
+  //         ),
+  //       ),
+  //       const SizedBox(
+  //         height: 10,
+  //         width: 15,
+  //       ),
+  //       Expanded(
+  //         child: GestureDetector(
+  //           onTap: () {
+  //             Navigator.push(
+  //                 context,
+  //                 MaterialPageRoute(
+  //                     builder: (context) => DiscussioPage()));
+  //           },
+  //           child: Container(
+  //               decoration: BoxDecoration(
+  //                 color: Colors.white,
+  //                 boxShadow: const [
+  //                   BoxShadow(
+  //                     color: Colors.grey,
+  //                     offset: Offset(0.0, 1.0), //(x,y)
+  //                     blurRadius: 6.0,
+  //                   ),
+  //                 ],
+  //                 borderRadius: BorderRadius.circular(10.0),
+  //               ),
+  //               height: 130.0,
+  //               child: Column(
+  //                 mainAxisAlignment: MainAxisAlignment.center,
+  //                 children: [
+  //                   Expanded(
+  //                     flex: 3,
+  //                     child: Row(
+  //                       mainAxisAlignment: MainAxisAlignment.center,
+  //                       children: [
+  //                         Expanded(
+  //                           child: Padding(
+  //                             padding: const EdgeInsets.symmetric(
+  //                                 horizontal: 8.0, vertical: 2.0),
+  //                             child: Image.network(
+  //                               'https://cdn4.iconfinder.com/data/icons/got-an-idea/128/discussion-512.png',
+  //                               //height: 120.0,
+  //                               fit: BoxFit.contain,
+  //                             ),
+  //                           ),
+  //                         ),
+  //                       ],
+  //                     ),
+  //                   ),
+  //                   Expanded(
+  //                     child: Row(
+  //                       mainAxisAlignment: MainAxisAlignment.center,
+  //                       children: const [
+  //                         Text(
+  //                           "Discussion",
+  //                           style: TextStyle(
+  //                               fontSize: 14.0, color: Colors.grey),
+  //                         )
+  //                       ],
+  //                     ),
+  //                   )
+  //                 ],
+  //               )),
+  //         ),
+  //       )
+  //     ],
+  //   ),
+  // );
 }
 
 Widget optionWidget(title, imageUrl) {
