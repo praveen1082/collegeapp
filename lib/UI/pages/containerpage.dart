@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kcmitapp/UI/pages/attendancepage.dart';
+import 'package:kcmitapp/UI/pages/gallerypage.dart';
 import 'package:kcmitapp/UI/pages/home.dart';
 import 'package:kcmitapp/UI/pages/resultpage.dart';
 
@@ -184,6 +185,11 @@ class _ContainerPageState extends State<ContainerPage> {
                           context,
                           MaterialPageRoute(
                               builder: (context) => AttendancePage()));
+                    } else if (index == 4) {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => GalleryPage()));
                     }
                     setState(() {
                       _selected++;
