@@ -90,6 +90,7 @@ class _ContainerPageState extends State<ContainerPage> {
     return Drawer(
       child: ListView(
         shrinkWrap: true,
+        physics: BouncingScrollPhysics(),
         children: [
           Container(
             decoration: BoxDecoration(
@@ -169,33 +170,26 @@ class _ContainerPageState extends State<ContainerPage> {
             physics: NeverScrollableScrollPhysics(),
             itemCount: drawerlist.length,
             itemBuilder: (context, index) {
-              return Container(
-                //height: double.infinity,
-                child: ListTile(
-                  leading: Icon(icon[index]),
-                  title: Text(drawerlist[index]),
-                  onTap: () {
-                    if (index == 10) {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => ResultPage()));
-                    } else if (index == 3) {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => AttendancePage()));
-                    } else if (index == 4) {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => GalleryPage()));
-                    }
-                    setState(() {
-                      _selected++;
-                    });
-                  },
-                ),
+              return ListTile(
+                leading: Icon(icon[index]),
+                title: Text(drawerlist[index]),
+                onTap: () {
+                  if (index == 10) {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => ResultPage()));
+                  } else if (index == 3) {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => AttendancePage()));
+                  } else if (index == 5) {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => GalleryPage()));
+                  }
+                  setState(() {
+                    _selected++;
+                  });
+                },
               );
             },
           ),
