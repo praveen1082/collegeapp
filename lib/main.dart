@@ -16,6 +16,7 @@ class KcmitApp extends StatelessWidget {
       home: ContainerPage(
         title: "Home",
         page: Home(),
+        selected: 0,
       ),
     );
   }

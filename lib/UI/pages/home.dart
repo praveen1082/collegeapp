@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:kcmitapp/UI/pages/calendarpage.dart';
 import 'package:kcmitapp/UI/pages/contactpage.dart';
+import 'package:kcmitapp/UI/pages/containerpage.dart';
 import 'package:kcmitapp/UI/pages/discussion.dart';
 import 'package:kcmitapp/UI/pages/facultypage.dart';
 import 'package:kcmitapp/UI/pages/notice.dart';
@@ -15,6 +16,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       shrinkWrap: true,
+      physics: BouncingScrollPhysics(),
       children: [
         Container(
             height: 240.0,
@@ -261,8 +263,15 @@ class Home extends StatelessWidget {
               Expanded(
                 child: GestureDetector(
                   onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Notice()));
+                    Navigator.pop(context);
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ContainerPage(
+                                  page: Notice(),
+                                  selected: 1,
+                                  title: "Notice",
+                                )));
                   },
                   child: Container(
                       decoration: BoxDecoration(
