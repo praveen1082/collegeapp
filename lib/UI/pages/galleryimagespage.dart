@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kcmitapp/UI/pages/galleryimagedisplaypage.dart';
 
 class GalleryImagePage extends StatelessWidget {
   const GalleryImagePage({Key? key}) : super(key: key);
@@ -21,9 +22,12 @@ class GalleryImagePage extends StatelessWidget {
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: 150.0,
-                    color: Colors.blue,
+                  child: GestureDetector(
+                    onTap: () {},
+                    child: Container(
+                      height: 150.0,
+                      color: Colors.blue,
+                    ),
                   ),
                 ),
               ),
@@ -33,9 +37,17 @@ class GalleryImagePage extends StatelessWidget {
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: 150.0,
-                    color: Colors.blue,
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => GalleryImageDisplayPage()));
+                    },
+                    child: Container(
+                      height: 150.0,
+                      color: Colors.blue,
+                    ),
                   ),
                 ),
               )
