@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kcmitapp/UI/pages/containerpage.dart';
+import 'package:kcmitapp/UI/pages/home.dart';
 
 void main() {
   runApp(KcmitApp());
@@ -14,6 +15,7 @@ class KcmitApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: ContainerPage(
         title: "Home",
+        page: Home(),
       ),
     );
   }

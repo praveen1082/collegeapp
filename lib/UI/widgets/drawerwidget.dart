@@ -134,9 +134,28 @@ class _DrawerWidgetState extends State<DrawerWidget> {
             physics: NeverScrollableScrollPhysics(),
             itemCount: drawerlist.length,
             itemBuilder: (context, index) {
-              return ListTile(
-                leading: Icon(icon[index]),
-                title: Text(drawerlist[index]),
+              return GestureDetector(
+                child: Container(
+                  padding: EdgeInsets.all(5.0),
+                  color: _selected == index ? Colors.grey[200] : Colors.white,
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Icon(
+                          icon[index],
+                          size: 35,
+                          color: Colors.grey,
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Expanded(child: Text(drawerlist[index])),
+                      ],
+                    ),
+                  ),
+                ),
                 onTap: () {
                   if (index == 10) {
                     Navigator.push(context,
@@ -155,6 +174,27 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                   });
                 },
               );
+              // return ListTile(
+              //   leading: Icon(icon[index]),
+              //   title: Text(drawerlist[index]),
+              //   onTap: () {
+              //     if (index == 10) {
+              //       Navigator.push(context,
+              //           MaterialPageRoute(builder: (context) => ResultPage()));
+              //     } else if (index == 3) {
+              //       Navigator.push(
+              //           context,
+              //           MaterialPageRoute(
+              //               builder: (context) => AttendancePage()));
+              //     } else if (index == 5) {
+              //       Navigator.push(context,
+              //           MaterialPageRoute(builder: (context) => GalleryPage()));
+              //     }
+              //     setState(() {
+              //       _selected = index;
+              //     });
+              //   },
+              // );
             },
           ),
           const Divider(),
