@@ -99,7 +99,7 @@ class Home extends StatelessWidget {
                                   child: Image.network(
                                     'https://cdn.pngsumo.com/classroom-professor-teacher-teaching-tutor-icon-professor-teaching-png-512_512.png',
                                     //height: 120.0,
-                                    fit: BoxFit.fill,
+                                    fit: BoxFit.contain,
                                   ),
                                 ),
                               ],
@@ -160,7 +160,7 @@ class Home extends StatelessWidget {
                                   child: Image.network(
                                     'https://cdn1.iconfinder.com/data/icons/phone-call-3/400/Calls-18-512.png',
                                     //height: 120.0,
-                                    fit: BoxFit.fill,
+                                    fit: BoxFit.contain,
                                   ),
                                 ),
                               ],
@@ -221,7 +221,7 @@ class Home extends StatelessWidget {
                                   child: Image.network(
                                     'https://static.vecteezy.com/system/resources/previews/002/208/100/original/calendar-rgb-color-icon-vector.jpg',
                                     //height: 120.0,
-                                    fit: BoxFit.fill,
+                                    fit: BoxFit.contain,
                                   ),
                                 ),
                               ],
@@ -290,7 +290,7 @@ class Home extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Expanded(
-                            flex: 2,
+                            flex: 3,
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
@@ -299,10 +299,9 @@ class Home extends StatelessWidget {
                                     padding: const EdgeInsets.symmetric(
                                         horizontal: 8.0, vertical: 2.0),
                                     child: Image.network(
-                                      'https://icons.iconarchive.com/icons/grafikartes/flat-retro-modern/512/messages-icon.png',
-                                      //height: 120.0,
-                                      fit: BoxFit.fill,
-                                    ),
+                                        'https://icons.iconarchive.com/icons/grafikartes/flat-retro-modern/512/messages-icon.png',
+                                        //height: 120.0,
+                                        fit: BoxFit.contain),
                                   ),
                                 ),
                               ],
@@ -354,7 +353,7 @@ class Home extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Expanded(
-                            flex: 2,
+                            flex: 3,
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
@@ -365,7 +364,7 @@ class Home extends StatelessWidget {
                                     child: Image.network(
                                       'http://zucmanlab.com/wp-content/uploads/2018/11/download-1915753_960_720.png',
                                       height: 120.0,
-                                      fit: BoxFit.fill,
+                                      fit: BoxFit.contain,
                                     ),
                                   ),
                                 ),
@@ -433,7 +432,7 @@ class Home extends StatelessWidget {
                                     child: Image.network(
                                       'https://icons-for-free.com/iconfiles/png/512/calendar-131964752454737242.png',
                                       //height: 120.0,
-                                      fit: BoxFit.fill,
+                                      fit: BoxFit.contain,
                                     ),
                                   ),
                                 ),
@@ -496,7 +495,7 @@ class Home extends StatelessWidget {
                                     child: Image.network(
                                       'https://cdn4.iconfinder.com/data/icons/got-an-idea/128/discussion-512.png',
                                       //height: 120.0,
-                                      fit: BoxFit.fill,
+                                      fit: BoxFit.contain,
                                     ),
                                   ),
                                 ),
