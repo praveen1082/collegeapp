@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:kcmitapp/UI/pages/calendarpage.dart';
 import 'package:kcmitapp/UI/pages/contactpage.dart';
+import 'package:kcmitapp/UI/pages/containerpage.dart';
 import 'package:kcmitapp/UI/pages/discussion.dart';
 import 'package:kcmitapp/UI/pages/facultypage.dart';
 import 'package:kcmitapp/UI/pages/notice.dart';
@@ -15,503 +16,28 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       shrinkWrap: true,
+      physics: BouncingScrollPhysics(),
       children: [
-        Container(
-            height: 240.0,
-            width: double.infinity,
-            child: ImageSlideshow(
-                autoPlayInterval: 5000,
-                isLoop: true,
-                indicatorColor: Colors.white,
-                indicatorBackgroundColor: Colors.grey,
-                initialPage: 0,
-                children: [
-                  Image.network(
-                    'https://images.unsplash.com/20/cambridge.JPG?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dW5pdmVyc2l0eXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80',
-                    fit: BoxFit.fill,
-                  ),
-                  Image.network(
-                      'https://static.onecms.io/wp-content/uploads/sites/28/2017/03/georgia-berry-college-PRETTYCAMPUS0317.jpg',
-                      fit: BoxFit.fill),
-                  Image.network(
-                      'https://marvel-b1-cdn.bc0a.com/f00000000164722/www.udel.edu/content/udel/en/academics/colleges/_jcr_content/par_udel_panel/columngenerator_163104828/par/columngenerator/par_0/image.img.jpg/1565103752196.jpg',
-                      fit: BoxFit.fill),
-                  Image.network(
-                    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Trinity_College_-_Great_Court_02.jpg/1200px-Trinity_College_-_Great_Court_02.jpg',
-                    fit: BoxFit.fill,
-                  ),
-                ]),
-            decoration: const BoxDecoration(
-              color: Colors.white,
-            )),
-        Container(
-          height: 110.0,
-          decoration: const BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(10.0),
-                bottomRight: Radius.circular(10.0)),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.grey,
-                offset: Offset(0.0, 1.0), //(x,y)
-                blurRadius: 2.0,
-              ),
-            ],
-          ),
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Expanded(
-                  child: GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => FacultyPage()));
-                    },
-                    child: Container(
-                      //height: 110.0,
-                      decoration: const BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                        // boxShadow: [
-                        //   BoxShadow(
-                        //       color: Colors.grey,
-                        //       offset: Offset(1.0, 0.0),
-                        //       blurRadius: 2.0)
-                        // ],
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        children: [
-                          Expanded(
-                            flex: 5,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Expanded(
-                                  child: Image.network(
-                                    'https://cdn.pngsumo.com/classroom-professor-teacher-teaching-tutor-icon-professor-teaching-png-512_512.png',
-                                    //height: 120.0,
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Expanded(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.end,
-                              children: const [
-                                Text(
-                                  "Faculty",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 14.0,
-                                      color: Colors.grey),
-                                )
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  width: 10.0,
-                ),
-                Expanded(
-                  child: GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => ContactPage()));
-                    },
-                    child: Container(
-                      // height: 110.0,
-                      decoration: const BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                        // boxShadow: [
-                        //   BoxShadow(
-                        //       color: Colors.grey,
-                        //       offset: Offset(1.0, 0.0),
-                        //       blurRadius: 2.0)
-                        // ],
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Expanded(
-                            flex: 5,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Expanded(
-                                  child: Image.network(
-                                    'https://cdn1.iconfinder.com/data/icons/phone-call-3/400/Calls-18-512.png',
-                                    //height: 120.0,
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Expanded(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.end,
-                              children: const [
-                                Text(
-                                  "Contact Us",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 14.0,
-                                      color: Colors.grey),
-                                )
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  width: 10.0,
-                ),
-                Expanded(
-                  child: GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => CalendarPage()));
-                    },
-                    child: Container(
-                      // height: 110.0,
-                      decoration: const BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                        // boxShadow: [
-                        //   BoxShadow(
-                        //       color: Colors.grey,
-                        //       offset: Offset(1.0, 0.0),
-                        //       blurRadius: 2.0)
-                        // ],
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Expanded(
-                            flex: 5,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Expanded(
-                                  child: Image.network(
-                                    'https://static.vecteezy.com/system/resources/previews/002/208/100/original/calendar-rgb-color-icon-vector.jpg',
-                                    //height: 120.0,
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Expanded(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.end,
-                              children: const [
-                                Text(
-                                  "Calendar",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 14.0,
-                                      color: Colors.grey),
-                                )
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
+        imageSlider(),
+        belowSlider(context),
         const SizedBox(
           height: 15,
         ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 6),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Expanded(
-                child: GestureDetector(
-                  onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Notice()));
-                  },
-                  child: Container(
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        boxShadow: const [
-                          BoxShadow(
-                            color: Colors.grey,
-                            offset: Offset(0.0, 1.0), //(x,y)
-                            blurRadius: 2.0,
-                          ),
-                        ],
-                        borderRadius: BorderRadius.circular(10.0),
-                      ),
-                      height: 130.0,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Expanded(
-                            flex: 2,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Expanded(
-                                  child: Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 8.0, vertical: 2.0),
-                                    child: Image.network(
-                                      'https://icons.iconarchive.com/icons/grafikartes/flat-retro-modern/512/messages-icon.png',
-                                      //height: 120.0,
-                                      fit: BoxFit.fill,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          // const SizedBox(
-                          //   height: 30.0,
-                          // ),
-                          Expanded(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: const [
-                                Text(
-                                  "Notice",
-                                  style: TextStyle(
-                                      fontSize: 14.0, color: Colors.grey),
-                                )
-                              ],
-                            ),
-                          )
-                        ],
-                      )),
-                ),
-              ),
-              const SizedBox(
-                height: 10,
-                width: 10,
-              ),
-              Expanded(
-                child: GestureDetector(
-                  onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Resources()));
-                  },
-                  child: Container(
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        boxShadow: const [
-                          BoxShadow(
-                            color: Colors.grey,
-                            offset: Offset(0.0, 1.0), //(x,y)
-                            blurRadius: 6.0,
-                          ),
-                        ],
-                        borderRadius: BorderRadius.circular(10.0),
-                      ),
-                      height: 130.0,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Expanded(
-                            flex: 2,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Expanded(
-                                  child: Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 8.0, vertical: 2.0),
-                                    child: Image.network(
-                                      'http://zucmanlab.com/wp-content/uploads/2018/11/download-1915753_960_720.png',
-                                      height: 120.0,
-                                      fit: BoxFit.fill,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Expanded(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: const [
-                                Text(
-                                  "Resources",
-                                  style: TextStyle(
-                                      fontSize: 14.0, color: Colors.grey),
-                                )
-                              ],
-                            ),
-                          )
-                        ],
-                      )),
-                ),
-              )
-            ],
-          ),
+        optionsBar(
+            context,
+            "Notice",
+            "Resource",
+            'https://icons.iconarchive.com/icons/grafikartes/flat-retro-modern/512/messages-icon.png',
+            'http://zucmanlab.com/wp-content/uploads/2018/11/download-1915753_960_720.png'),
+        const SizedBox(
+          height: 15,
         ),
-        const SizedBox(height: 10.0),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 6),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Expanded(
-                child: GestureDetector(
-                  onTap: () {
-                    showAlertDialog(context);
-                    // Navigator.push(context,
-                    //     MaterialPageRoute(builder: (context) => RoutinePage()));
-                  },
-                  child: Container(
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        boxShadow: const [
-                          BoxShadow(
-                            color: Colors.grey,
-                            offset: Offset(0.0, 1.0), //(x,y)
-                            blurRadius: 6.0,
-                          ),
-                        ],
-                        borderRadius: BorderRadius.circular(10.0),
-                      ),
-                      height: 130.0,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Expanded(
-                            flex: 3,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Expanded(
-                                  child: Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 8.0, vertical: 2.0),
-                                    child: Image.network(
-                                      'https://icons-for-free.com/iconfiles/png/512/calendar-131964752454737242.png',
-                                      //height: 120.0,
-                                      fit: BoxFit.fill,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Expanded(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: const [
-                                Text(
-                                  "Routine",
-                                  style: TextStyle(
-                                      fontSize: 14.0, color: Colors.grey),
-                                )
-                              ],
-                            ),
-                          )
-                        ],
-                      )),
-                ),
-              ),
-              const SizedBox(
-                height: 10,
-                width: 15,
-              ),
-              Expanded(
-                child: GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => DiscussioPage()));
-                  },
-                  child: Container(
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        boxShadow: const [
-                          BoxShadow(
-                            color: Colors.grey,
-                            offset: Offset(0.0, 1.0), //(x,y)
-                            blurRadius: 6.0,
-                          ),
-                        ],
-                        borderRadius: BorderRadius.circular(10.0),
-                      ),
-                      height: 130.0,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Expanded(
-                            flex: 3,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Expanded(
-                                  child: Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 8.0, vertical: 2.0),
-                                    child: Image.network(
-                                      'https://cdn4.iconfinder.com/data/icons/got-an-idea/128/discussion-512.png',
-                                      //height: 120.0,
-                                      fit: BoxFit.fill,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Expanded(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: const [
-                                Text(
-                                  "Discussion",
-                                  style: TextStyle(
-                                      fontSize: 14.0, color: Colors.grey),
-                                )
-                              ],
-                            ),
-                          )
-                        ],
-                      )),
-                ),
-              )
-            ],
-          ),
+        optionsBar(
+          context,
+          "Routine",
+          "Discussion",
+          'https://icons-for-free.com/iconfiles/png/512/calendar-131964752454737242.png',
+          'https://cdn4.iconfinder.com/data/icons/got-an-idea/128/discussion-512.png',
         ),
         const SizedBox(
           height: 15,
@@ -800,4 +326,329 @@ showAlertDialog(BuildContext context) {
       return alert;
     },
   );
+}
+
+Widget imageSlider() {
+  return Container(
+      height: 240.0,
+      width: double.infinity,
+      child: ImageSlideshow(
+          autoPlayInterval: 5000,
+          isLoop: true,
+          indicatorColor: Colors.white,
+          indicatorBackgroundColor: Colors.grey,
+          initialPage: 0,
+          children: [
+            Image.network(
+              'https://images.unsplash.com/20/cambridge.JPG?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dW5pdmVyc2l0eXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80',
+              fit: BoxFit.fill,
+            ),
+            Image.network(
+                'https://static.onecms.io/wp-content/uploads/sites/28/2017/03/georgia-berry-college-PRETTYCAMPUS0317.jpg',
+                fit: BoxFit.fill),
+            Image.network(
+                'https://marvel-b1-cdn.bc0a.com/f00000000164722/www.udel.edu/content/udel/en/academics/colleges/_jcr_content/par_udel_panel/columngenerator_163104828/par/columngenerator/par_0/image.img.jpg/1565103752196.jpg',
+                fit: BoxFit.fill),
+            Image.network(
+              'https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Trinity_College_-_Great_Court_02.jpg/1200px-Trinity_College_-_Great_Court_02.jpg',
+              fit: BoxFit.fill,
+            ),
+          ]),
+      decoration: const BoxDecoration(
+        color: Colors.white,
+      ));
+}
+
+Widget belowSlider(context) {
+  return Container(
+    height: 110.0,
+    decoration: const BoxDecoration(
+      color: Colors.white,
+      borderRadius: BorderRadius.only(
+          bottomLeft: Radius.circular(10.0),
+          bottomRight: Radius.circular(10.0)),
+      boxShadow: [
+        BoxShadow(
+          color: Colors.grey,
+          offset: Offset(0.0, 1.0), //(x,y)
+          blurRadius: 2.0,
+        ),
+      ],
+    ),
+    child: Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Expanded(
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => FacultyPage()));
+              },
+              child: Container(
+                //height: 110.0,
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                  // boxShadow: [
+                  //   BoxShadow(
+                  //       color: Colors.grey,
+                  //       offset: Offset(1.0, 0.0),
+                  //       blurRadius: 2.0)
+                  // ],
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Expanded(
+                      flex: 5,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Expanded(
+                            child: Image.network(
+                              'https://cdn.pngsumo.com/classroom-professor-teacher-teaching-tutor-icon-professor-teaching-png-512_512.png',
+                              //height: 120.0,
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: const [
+                          Text(
+                            "Faculty",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 14.0,
+                                color: Colors.grey),
+                          )
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(
+            width: 10.0,
+          ),
+          Expanded(
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ContactPage()));
+              },
+              child: Container(
+                // height: 110.0,
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                  // boxShadow: [
+                  //   BoxShadow(
+                  //       color: Colors.grey,
+                  //       offset: Offset(1.0, 0.0),
+                  //       blurRadius: 2.0)
+                  // ],
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Expanded(
+                      flex: 5,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Expanded(
+                            child: Image.network(
+                              'https://cdn1.iconfinder.com/data/icons/phone-call-3/400/Calls-18-512.png',
+                              //height: 120.0,
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: const [
+                          Text(
+                            "Contact Us",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 14.0,
+                                color: Colors.grey),
+                          )
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(
+            width: 10.0,
+          ),
+          Expanded(
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => CalendarPage()));
+              },
+              child: Container(
+                // height: 110.0,
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                  // boxShadow: [
+                  //   BoxShadow(
+                  //       color: Colors.grey,
+                  //       offset: Offset(1.0, 0.0),
+                  //       blurRadius: 2.0)
+                  // ],
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Expanded(
+                      flex: 5,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Expanded(
+                            child: Image.network(
+                              'https://static.vecteezy.com/system/resources/previews/002/208/100/original/calendar-rgb-color-icon-vector.jpg',
+                              //height: 120.0,
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: const [
+                          Text(
+                            "Calendar",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 14.0,
+                                color: Colors.grey),
+                          )
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
+Widget optionsBar(context, title1, title2, image1, image2) {
+  return Padding(
+    padding: const EdgeInsets.symmetric(horizontal: 6),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Expanded(
+          child: GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => ContainerPage(
+                              page: Notice(),
+                              selected: 1,
+                              title: "Notice",
+                            )));
+              },
+              child: optionWidget(title1, image1)),
+        ),
+        const SizedBox(
+          height: 10,
+          width: 10,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Resources()));
+            },
+            child: optionWidget(title2, image2),
+          ),
+        )
+      ],
+    ),
+  );
+}
+
+Widget optionWidget(title, imageUrl) {
+  return Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        boxShadow: const [
+          BoxShadow(
+            color: Colors.grey,
+            offset: Offset(0.0, 1.0), //(x,y)
+            blurRadius: 2.0,
+          ),
+        ],
+        borderRadius: BorderRadius.circular(10.0),
+      ),
+      height: 130.0,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Expanded(
+            flex: 3,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 8.0, vertical: 2.0),
+                    child: Image.network(imageUrl,
+                        //height: 120.0,
+                        fit: BoxFit.contain),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          // const SizedBox(
+          //   height: 30.0,
+          // ),
+          Expanded(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  title.toString(),
+                  style: TextStyle(fontSize: 14.0, color: Colors.grey),
+                )
+              ],
+            ),
+          )
+        ],
+      ));
 }
