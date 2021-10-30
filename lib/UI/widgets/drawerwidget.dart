@@ -9,6 +9,7 @@ import 'package:kcmitapp/UI/pages/resultpage.dart';
 
 class DrawerWidget extends StatefulWidget {
   final select;
+
   const DrawerWidget({Key? key, this.select}) : super(key: key);
 
   @override
@@ -173,7 +174,7 @@ Widget drawerMenu(int select) {
           ),
           onTap: () {
             if (index == 0 && _selected != 0) {
-              Navigator.pop(context);
+              //Navigator.pop(context);
               Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -191,6 +192,7 @@ Widget drawerMenu(int select) {
                             title: drawerlist[index],
                             page: Notice(),
                             selected: index,
+                            //drawerorscreen: false,
                           )));
             } else if (index == 2 && _selected != 2) {
               Navigator.push(context,
@@ -210,27 +212,6 @@ Widget drawerMenu(int select) {
             });
           },
         );
-        // return ListTile(
-        //   leading: Icon(icon[index]),
-        //   title: Text(drawerlist[index]),
-        //   onTap: () {
-        //     if (index == 10) {
-        //       Navigator.push(context,
-        //           MaterialPageRoute(builder: (context) => ResultPage()));
-        //     } else if (index == 3) {
-        //       Navigator.push(
-        //           context,
-        //           MaterialPageRoute(
-        //               builder: (context) => AttendancePage()));
-        //     } else if (index == 5) {
-        //       Navigator.push(context,
-        //           MaterialPageRoute(builder: (context) => GalleryPage()));
-        //     }
-        //     setState(() {
-        //       _selected = index;
-        //     });
-        //   },
-        // );
       },
     );
   });
