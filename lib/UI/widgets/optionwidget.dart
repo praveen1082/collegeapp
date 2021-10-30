@@ -15,7 +15,7 @@ class OptionWidget extends StatelessWidget {
     return Expanded(
       child: GestureDetector(
           onTap: () {
-            Navigator.pop(context);
+            //Navigator.pop(context);
             Navigator.push(
                 context,
                 MaterialPageRoute(
