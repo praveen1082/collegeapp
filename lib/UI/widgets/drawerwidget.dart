@@ -6,6 +6,7 @@ import 'package:kcmitapp/UI/pages/home.dart';
 import 'package:kcmitapp/UI/pages/notice.dart';
 import 'package:kcmitapp/UI/pages/resources.dart';
 import 'package:kcmitapp/UI/pages/resultpage.dart';
+import 'package:kcmitapp/UI/pages/routine.dart';
 
 class DrawerWidget extends StatefulWidget {
   final select;
@@ -206,6 +207,9 @@ Widget drawerMenu(int select) {
             } else if (index == 5 && _selected != 5) {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => GalleryPage()));
+            } else if (index == 8 && _selected != 8) {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => RoutinePage()));
             }
             setState(() {
               _selected = index;

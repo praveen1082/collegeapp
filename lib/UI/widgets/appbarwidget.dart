@@ -13,7 +13,7 @@ class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
 
     return AppBar(
       elevation: 0,
-      backgroundColor: Colors.blue[900],
+      backgroundColor: Colors.lightBlue[900],
       titleSpacing: 10.0,
       title: Text(title),
       actions: [

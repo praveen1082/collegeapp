@@ -47,11 +47,11 @@ class OptionsBarWidget extends StatelessWidget {
               OptionWidget(
                 imageUrl:
                     'https://icons-for-free.com/iconfiles/png/512/calendar-131964752454737242.png',
-                page: showAlertDialog(context),
+                page: RoutinePage(),
                 title: "Routine",
                 drawerselected: 8,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
               OptionWidget(
