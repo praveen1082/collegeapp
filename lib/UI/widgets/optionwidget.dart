@@ -131,132 +131,108 @@ showAlertDialog(BuildContext context) {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Row(
-            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Column(
-                children: [Text("Faculty")],
+              Expanded(child: Text("Faculty")),
+              SizedBox(
+                width: 10.0,
               ),
               Expanded(
-                child: SizedBox(
-                  width: 10.0,
-                ),
-              ),
-              Expanded(
-                child: Column(
-                  children: [
-                    DropdownButton<String>(
-                      underline: SizedBox(),
-                      isExpanded: true,
-                      value: facultydropdownValue,
-                      icon: const Icon(Icons.arrow_drop_down),
-                      iconSize: 24,
-                      elevation: 0,
-                      //style: const TextStyle(color: Colors.deepPurple),
-                      onChanged: (newValue) {
-                        setstate(() {
-                          facultydropdownValue = newValue;
-                        });
-                      },
-                      items: <String>['BIM', 'BBA', 'BCA']
-                          .map<DropdownMenuItem<String>>((String value) {
-                        return DropdownMenuItem<String>(
-                          value: value,
-                          child: Text(value),
-                        );
-                      }).toList(),
-                    ),
-                  ],
+                child: DropdownButton<String>(
+                  underline: SizedBox(),
+                  isExpanded: true,
+                  value: facultydropdownValue,
+                  icon: const Icon(Icons.arrow_drop_down),
+                  iconSize: 24,
+                  elevation: 0,
+                  //style: const TextStyle(color: Colors.deepPurple),
+                  onChanged: (newValue) {
+                    setstate(() {
+                      facultydropdownValue = newValue;
+                    });
+                  },
+                  items: <String>['BIM', 'BBA', 'BCA']
+                      .map<DropdownMenuItem<String>>((String value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(value),
+                    );
+                  }).toList(),
                 ),
               ),
             ],
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Column(
-                children: [Text("Semester")],
+              Expanded(child: Text("Semester")),
+              SizedBox(
+                width: 10.0,
               ),
               Expanded(
-                child: SizedBox(
-                  width: 10.0,
-                ),
-              ),
-              Expanded(
-                child: Column(
-                  children: [
-                    DropdownButton<String>(
-                      underline: SizedBox(),
-                      isExpanded: true,
-                      value: semesterdropdownValue,
-                      icon: const Icon(Icons.arrow_drop_down),
-                      iconSize: 24,
-                      elevation: 0,
-                      //style: const TextStyle(color: Colors.deepPurple),
-                      onChanged: (String? newValue) {
-                        setstate(() {
-                          semesterdropdownValue = newValue;
-                        });
-                      },
-                      items: <String>[
-                        '1st',
-                        '2nd',
-                        '3rd',
-                        '4th',
-                        '5th',
-                        '6th',
-                        '7th',
-                        '8th'
-                      ].map<DropdownMenuItem<String>>((String value) {
-                        return DropdownMenuItem<String>(
-                          value: value,
-                          child: Text(value),
-                        );
-                      }).toList(),
-                    ),
-                  ],
+                child: DropdownButton<String>(
+                  underline: SizedBox(),
+                  isExpanded: true,
+                  value: semesterdropdownValue,
+                  icon: const Icon(Icons.arrow_drop_down),
+                  iconSize: 24,
+                  elevation: 0,
+                  //style: const TextStyle(color: Colors.deepPurple),
+                  onChanged: (String? newValue) {
+                    setstate(() {
+                      semesterdropdownValue = newValue;
+                    });
+                  },
+                  items: <String>[
+                    '1st',
+                    '2nd',
+                    '3rd',
+                    '4th',
+                    '5th',
+                    '6th',
+                    '7th',
+                    '8th'
+                  ].map<DropdownMenuItem<String>>((String value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(value),
+                    );
+                  }).toList(),
                 ),
               ),
             ],
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Column(
-                children: [Text("Section")],
+              Expanded(child: Text("Section")),
+              SizedBox(
+                width: 10.0,
               ),
               Expanded(
-                child: SizedBox(
-                  width: 10.0,
-                ),
-              ),
-              Expanded(
-                child: Column(
-                  children: [
-                    DropdownButton<String>(
-                      isExpanded: true,
-                      underline: SizedBox(),
-                      value: sectiondropdownValue,
-                      icon: const Icon(Icons.arrow_drop_down),
-                      iconSize: 24,
-                      elevation: 0,
-                      //style: const TextStyle(color: Colors.deepPurple),
-                      onChanged: (String? newValue) {
-                        setstate(() {
-                          sectiondropdownValue = newValue;
-                        });
-                      },
-                      items: <String>['A', 'B']
-                          .map<DropdownMenuItem<String>>((String value) {
-                        return DropdownMenuItem<String>(
-                          value: value,
-                          child: Text(value),
-                        );
-                      }).toList(),
-                    ),
-                  ],
+                child: DropdownButton<String>(
+                  isExpanded: true,
+                  underline: SizedBox(),
+                  value: sectiondropdownValue,
+                  icon: const Icon(Icons.arrow_drop_down),
+                  iconSize: 24,
+                  elevation: 0,
+                  //style: const TextStyle(color: Colors.deepPurple),
+                  onChanged: (String? newValue) {
+                    setstate(() {
+                      sectiondropdownValue = newValue;
+                    });
+                  },
+                  items: <String>['A', 'B']
+                      .map<DropdownMenuItem<String>>((String value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(value),
+                    );
+                  }).toList(),
                 ),
               ),
             ],
