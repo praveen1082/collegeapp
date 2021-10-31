@@ -105,6 +105,8 @@ showAlertDialog(BuildContext context) {
               builder: (context) => ContainerPage(
                     page: RoutinePage(),
                     title: "Routine",
+                    subtitle:
+                        "${facultydropdownValue} ${semesterdropdownValue} ${sectiondropdownValue}",
                     selected: 8,
                   )));
     },

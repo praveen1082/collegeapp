@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
   //final Color backgroundColor = Colors.red;
   final title;
+  final subtitle;
   final appBar;
 
-  const BaseAppBar({Key? key, this.title, this.appBar}) : super(key: key);
+  const BaseAppBar({Key? key, this.title, this.subtitle, this.appBar})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +25,7 @@ class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
                       color: Colors.white,
                       fontWeight: FontWeight.w600)),
               subtitle: Text(
-                "BIM 1st A",
+                subtitle,
                 style: TextStyle(fontSize: 10, color: Colors.white),
               ))
           : Text(title),

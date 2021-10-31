@@ -6,8 +6,10 @@ class ContainerPage extends StatefulWidget {
   final page;
   final title;
   final selected;
+  final subtitle;
 
-  const ContainerPage({Key? key, this.title, this.page, this.selected})
+  const ContainerPage(
+      {Key? key, this.title, this.page, this.selected, this.subtitle})
       : super(key: key);
 
   @override
@@ -25,6 +27,7 @@ class _ContainerPageState extends State<ContainerPage> {
         child: Scaffold(
           appBar: BaseAppBar(
             title: widget.title,
+            subtitle: widget.subtitle,
             appBar: AppBar(),
           ),
           drawer: DrawerWidget(
