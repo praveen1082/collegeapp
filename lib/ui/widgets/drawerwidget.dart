@@ -9,6 +9,7 @@ import 'package:kcmitapp/ui/pages/notice.dart';
 import 'package:kcmitapp/ui/pages/resources.dart';
 import 'package:kcmitapp/ui/pages/resultpage.dart';
 import 'package:kcmitapp/ui/pages/routine.dart';
+import 'package:kcmitapp/ui/widgets/optionwidget.dart';
 
 class DrawerWidget extends StatefulWidget {
   final select;
@@ -222,18 +223,27 @@ Widget drawerMenu(int select) {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => GalleryPage()));
             } else if (index == 7 && _selected != 7) {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => FacultyPage()));
-            } else if (index == 8 && _selected != 8) {
-              Navigator.pop(context);
+              Navigator.of(context).pop();
               Navigator.push(
                   context,
                   MaterialPageRoute(
                       builder: (context) => ContainerPage(
-                            title: drawerlist[index],
-                            selected: 8,
-                            page: RoutinePage(),
+                            page: FacultyPage(),
+                            selected: 7,
+                            title: "Faculty",
                           )));
+            } else if (index == 8 && _selected != 8) {
+              Navigator.pop(context);
+              showAlertDialog(context);
+
+              // Navigator.push(
+              //     context,
+              //     MaterialPageRoute(
+              //         builder: (context) => ContainerPage(
+              //               title: drawerlist[index],
+              //               selected: 8,
+              //               page: showAlertDialog(context),
+              //             )));
             }
             setState(() {
               _selected = index;
