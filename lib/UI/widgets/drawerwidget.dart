@@ -208,8 +208,15 @@ Widget drawerMenu(int select) {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => GalleryPage()));
             } else if (index == 8 && _selected != 8) {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => RoutinePage()));
+              Navigator.pop(context);
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => ContainerPage(
+                            title: drawerlist[index],
+                            selected: 8,
+                            page: RoutinePage(),
+                          )));
             }
             setState(() {
               _selected = index;

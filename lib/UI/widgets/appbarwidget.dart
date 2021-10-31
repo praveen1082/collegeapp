@@ -15,7 +15,18 @@ class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
       elevation: 0,
       backgroundColor: Colors.lightBlue[900],
       titleSpacing: 10.0,
-      title: Text(title),
+      title: title == "Routine"
+          ? ListTile(
+              title: Text(title,
+                  style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600)),
+              subtitle: Text(
+                "BIM 1st A",
+                style: TextStyle(fontSize: 10, color: Colors.white),
+              ))
+          : Text(title),
       actions: [
         PopupMenuButton(
           itemBuilder: (BuildContext bc) {
