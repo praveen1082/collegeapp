@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kcmitapp/UI/widgets/appbarwidget.dart';
-import 'package:kcmitapp/UI/widgets/drawerwidget.dart';
+import 'package:kcmitapp/ui/widgets/appbarwidget.dart';
+import 'package:kcmitapp/ui/widgets/drawerwidget.dart';
 
 class ContainerPage extends StatefulWidget {
   final page;

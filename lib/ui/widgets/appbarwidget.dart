@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kcmitapp/appicons.dart';
 
 class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
   //final Color backgroundColor = Colors.red;
@@ -17,6 +18,13 @@ class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
       elevation: 0,
       backgroundColor: Colors.lightBlue[900],
       titleSpacing: 10.0,
+      leading: IconButton(
+        //iconSize: 20,
+        icon: Icon(AppIcons.stream),
+        onPressed: () {
+          Scaffold.of(context).openDrawer();
+        },
+      ),
       title: title == "Routine"
           ? ListTile(
               title: Text(title,

@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
-import 'package:kcmitapp/UI/pages/calendarpage.dart';
-import 'package:kcmitapp/UI/pages/contactpage.dart';
-import 'package:kcmitapp/UI/pages/facultypage.dart';
-import 'package:kcmitapp/UI/pages/routine.dart';
-import 'package:kcmitapp/UI/widgets/homefooterwidget.dart';
-import 'package:kcmitapp/UI/widgets/optionsbarwidget.dart';
+import 'package:kcmitapp/ui/pages/calendarpage.dart';
+import 'package:kcmitapp/ui/pages/contactpage.dart';
+import 'package:kcmitapp/ui/pages/facultypage.dart';
+import 'package:kcmitapp/ui/widgets/homefooterwidget.dart';
+import 'package:kcmitapp/ui/widgets/optionsbarwidget.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);

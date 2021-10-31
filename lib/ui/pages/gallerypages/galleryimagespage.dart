@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kcmitapp/UI/pages/galleryimagedisplaypage.dart';
+import 'package:kcmitapp/ui/pages/gallerypages/galleryimagedisplaypage.dart';
 
 class GalleryImagePage extends StatelessWidget {
   const GalleryImagePage({Key? key}) : super(key: key);

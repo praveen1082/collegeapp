@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kcmitapp/UI/pages/containerpage.dart';
-import 'package:kcmitapp/UI/widgets/alertwidget.dart';
+import 'package:kcmitapp/ui/pages/containerpage.dart';
+import 'package:kcmitapp/ui/widgets/alertwidget.dart';
 
 class OptionWidget extends StatelessWidget {
   final imageUrl;

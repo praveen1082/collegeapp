@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kcmitapp/UI/pages/containerpage.dart';
-import 'package:kcmitapp/UI/pages/routine.dart';
+import 'package:kcmitapp/ui/pages/containerpage.dart';
+import 'package:kcmitapp/ui/pages/routine.dart';
 
 class AlertWidget extends StatelessWidget {
   const AlertWidget({Key? key}) : super(key: key);
