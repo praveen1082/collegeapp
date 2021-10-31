@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kcmitapp/appicons.dart';
 import 'package:kcmitapp/ui/pages/attendancepage.dart';
 import 'package:kcmitapp/ui/pages/containerpage.dart';
+import 'package:kcmitapp/ui/pages/facultypage.dart';
 import 'package:kcmitapp/ui/pages/gallerypages/gallerypage.dart';
 import 'package:kcmitapp/ui/pages/home.dart';
 import 'package:kcmitapp/ui/pages/notice.dart';
@@ -220,6 +221,9 @@ Widget drawerMenu(int select) {
             } else if (index == 5 && _selected != 5) {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => GalleryPage()));
+            } else if (index == 7 && _selected != 7) {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => FacultyPage()));
             } else if (index == 8 && _selected != 8) {
               Navigator.pop(context);
               Navigator.push(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:kcmitapp/ui/pages/calendarpage.dart';
 import 'package:kcmitapp/ui/pages/contactpage.dart';
+import 'package:kcmitapp/ui/pages/containerpage.dart';
 import 'package:kcmitapp/ui/pages/facultypage.dart';
 import 'package:kcmitapp/ui/widgets/homefooterwidget.dart';
 import 'package:kcmitapp/ui/widgets/optionsbarwidget.dart';
@@ -88,8 +89,14 @@ Widget belowSlider(context) {
           Expanded(
             child: GestureDetector(
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => FacultyPage()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => ContainerPage(
+                              page: FacultyPage(),
+                              title: "Faculty",
+                              selected: 7,
+                            )));
               },
               child: Container(
                 //height: 110.0,

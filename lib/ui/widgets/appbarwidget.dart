@@ -19,8 +19,8 @@ class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: Colors.lightBlue[900],
       titleSpacing: 10.0,
       leading: IconButton(
-        //iconSize: 20,
-        icon: Icon(AppIcons.stream),
+        iconSize: 20,
+        icon: Icon(AppIcons.bars),
         onPressed: () {
           Scaffold.of(context).openDrawer();
         },
