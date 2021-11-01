@@ -36,8 +36,8 @@ class Home extends StatelessWidget {
 
 Widget imageSlider() {
   return Container(
-      height: 250.0,
-      width: double.infinity,
+      height: 255.0,
+      //width: double.infinity,
       child: ImageSlideshow(
           autoPlayInterval: 3000,
           isLoop: true,
@@ -45,19 +45,129 @@ Widget imageSlider() {
           indicatorBackgroundColor: Colors.grey,
           initialPage: 0,
           children: [
-            Image.network(
-              'https://images.unsplash.com/20/cambridge.JPG?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dW5pdmVyc2l0eXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80',
-              fit: BoxFit.fill,
+            Stack(
+              clipBehavior: Clip.none,
+              children: [
+                Image.network(
+                  'https://images.unsplash.com/20/cambridge.JPG?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dW5pdmVyc2l0eXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80',
+                  fit: BoxFit.cover,
+                ),
+                Align(
+                  alignment: Alignment.bottomLeft,
+                  child: Container(
+                    // width: double.infinity,
+                    color: Colors.black38,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const [
+                            Expanded(
+                              child: Text(
+                                "Praveen Panta ",
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            )
+                          ]),
+                    ),
+                  ),
+                )
+              ],
             ),
-            Image.network(
-                'https://static.onecms.io/wp-content/uploads/sites/28/2017/03/georgia-berry-college-PRETTYCAMPUS0317.jpg',
-                fit: BoxFit.fill),
-            Image.network(
-                'https://marvel-b1-cdn.bc0a.com/f00000000164722/www.udel.edu/content/udel/en/academics/colleges/_jcr_content/par_udel_panel/columngenerator_163104828/par/columngenerator/par_0/image.img.jpg/1565103752196.jpg',
-                fit: BoxFit.fill),
-            Image.network(
-              'https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Trinity_College_-_Great_Court_02.jpg/1200px-Trinity_College_-_Great_Court_02.jpg',
-              fit: BoxFit.fill,
+            Stack(
+              children: [
+                Image.network(
+                  'https://images.unsplash.com/20/cambridge.JPG?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dW5pdmVyc2l0eXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80',
+                  fit: BoxFit.fill,
+                ),
+                Positioned(
+                    right: 0,
+                    left: 0,
+                    bottom: 8,
+                    child: Container(
+                      // width: double.infinity,
+                      color: Colors.black38,
+                      child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Expanded(
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  "Praveen Panta ",
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                              ),
+                            )
+                          ]),
+                    ))
+              ],
+            ),
+            Container(
+              child: Stack(
+                children: [
+                  Image.network(
+                    'https://images.unsplash.com/20/cambridge.JPG?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dW5pdmVyc2l0eXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80',
+                    fit: BoxFit.fill,
+                  ),
+                  Positioned(
+                      right: 0,
+                      left: 0,
+                      bottom: 8,
+                      child: Container(
+                        // width: double.infinity,
+                        color: Colors.black26,
+                        child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Expanded(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                    "Praveen Panta ",
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                ),
+                              )
+                            ]),
+                      ))
+                ],
+              ),
+            ),
+            Container(
+              child: Stack(
+                children: [
+                  Image.network(
+                    'https://images.unsplash.com/20/cambridge.JPG?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dW5pdmVyc2l0eXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80',
+                    fit: BoxFit.fill,
+                  ),
+                  Positioned(
+                      right: 0,
+                      left: 0,
+                      bottom: 8,
+                      child: Container(
+                        // width: double.infinity,
+                        color: Colors.black38,
+                        child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Expanded(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                    "Praveen Panta ",
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                ),
+                              )
+                            ]),
+                      ))
+                ],
+              ),
             ),
           ]),
       decoration: const BoxDecoration(

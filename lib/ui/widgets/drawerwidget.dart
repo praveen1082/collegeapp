@@ -8,7 +8,6 @@ import 'package:kcmitapp/ui/pages/home.dart';
 import 'package:kcmitapp/ui/pages/notice.dart';
 import 'package:kcmitapp/ui/pages/resources.dart';
 import 'package:kcmitapp/ui/pages/resultpage.dart';
-import 'package:kcmitapp/ui/pages/routine.dart';
 import 'package:kcmitapp/ui/widgets/optionwidget.dart';
 
 class DrawerWidget extends StatefulWidget {
