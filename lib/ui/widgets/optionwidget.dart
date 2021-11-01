@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kcmitapp/UI/pages/containerpage.dart';
+import 'package:kcmitapp/ui/pages/containerpage.dart';
+import 'package:kcmitapp/ui/widgets/alertwidget.dart';
 
 class OptionWidget extends StatelessWidget {
   final imageUrl;
@@ -15,15 +16,19 @@ class OptionWidget extends StatelessWidget {
     return Expanded(
       child: GestureDetector(
           onTap: () {
+            if (title == "Routine") {
+              showAlertDialog(context);
+            } else {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => ContainerPage(
+                            page: page,
+                            selected: drawerselected,
+                            title: title,
+                          )));
+            }
             //Navigator.pop(context);
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => ContainerPage(
-                          page: page,
-                          selected: drawerselected,
-                          title: title,
-                        )));
           },
           child: customWidget(title, imageUrl)),
     );
@@ -80,4 +85,13 @@ Widget customWidget(title, imageUrl) {
           )
         ],
       ));
+}
+
+showAlertDialog(BuildContext context) {
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return AlertWidget();
+    },
+  );
 }

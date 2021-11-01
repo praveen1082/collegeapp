@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:kcmitapp/appicons.dart';
 
 class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
   //final Color backgroundColor = Colors.red;
   final title;
+  final subtitle;
   final appBar;
 
-  const BaseAppBar({Key? key, this.title, this.appBar}) : super(key: key);
+  const BaseAppBar({Key? key, this.title, this.subtitle, this.appBar})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,9 +16,27 @@ class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
 
     return AppBar(
       elevation: 0,
-      backgroundColor: Colors.blue[900],
+      backgroundColor: Colors.lightBlue[900],
       titleSpacing: 10.0,
-      title: Text(title),
+      leading: IconButton(
+        iconSize: 20,
+        icon: Icon(AppIcons.bars),
+        onPressed: () {
+          Scaffold.of(context).openDrawer();
+        },
+      ),
+      title: title == "Routine"
+          ? ListTile(
+              title: Text(title,
+                  style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600)),
+              subtitle: Text(
+                subtitle,
+                style: TextStyle(fontSize: 10, color: Colors.white),
+              ))
+          : Text(title),
       actions: [
         PopupMenuButton(
           itemBuilder: (BuildContext bc) {

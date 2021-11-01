@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kcmitapp/UI/widgets/messagedisplaywidget.dart';
+import 'package:kcmitapp/ui/widgets/messagedisplaywidget.dart';
 
 class MessageSenderWidget extends StatelessWidget {
   MessageSenderWidget({Key? key}) : super(key: key);

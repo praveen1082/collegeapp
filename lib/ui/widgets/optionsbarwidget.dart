@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:kcmitapp/UI/pages/discussion.dart';
-import 'package:kcmitapp/UI/pages/notice.dart';
-import 'package:kcmitapp/UI/pages/resources.dart';
-import 'package:kcmitapp/UI/pages/routine.dart';
-import 'package:kcmitapp/UI/widgets/optionwidget.dart';
+import 'package:kcmitapp/ui/pages/discussion.dart';
+import 'package:kcmitapp/ui/pages/notice.dart';
+import 'package:kcmitapp/ui/pages/resources.dart';
+import 'package:kcmitapp/ui/widgets/optionwidget.dart';
 
-class OptionsBarWidget extends StatelessWidget {
+class OptionsBarWidget extends StatefulWidget {
   const OptionsBarWidget({Key? key}) : super(key: key);
 
+  @override
+  _OptionsBarWidgetState createState() => _OptionsBarWidgetState();
+}
+
+class _OptionsBarWidgetState extends State<OptionsBarWidget> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -46,11 +50,9 @@ class OptionsBarWidget extends StatelessWidget {
               OptionWidget(
                 imageUrl:
                     'https://icons-for-free.com/iconfiles/png/512/calendar-131964752454737242.png',
-                page: RoutinePage(),
                 title: "Routine",
-                drawerselected: 8,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
               OptionWidget(

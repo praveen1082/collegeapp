@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:kcmitapp/UI/widgets/messagesenderwidget.dart';
 
 class MessageDisplay extends StatelessWidget {
   final sending;

@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:kcmitapp/UI/widgets/appbarwidget.dart';
-import 'package:kcmitapp/UI/widgets/drawerwidget.dart';
+import 'package:kcmitapp/ui/widgets/appbarwidget.dart';
+import 'package:kcmitapp/ui/widgets/drawerwidget.dart';
 
 class ContainerPage extends StatefulWidget {
   final page;
   final title;
   final selected;
+  final subtitle;
 
-  const ContainerPage({Key? key, this.title, this.page, this.selected})
+  const ContainerPage(
+      {Key? key, this.title, this.page, this.selected, this.subtitle})
       : super(key: key);
 
   @override
@@ -25,6 +27,7 @@ class _ContainerPageState extends State<ContainerPage> {
         child: Scaffold(
           appBar: BaseAppBar(
             title: widget.title,
+            subtitle: widget.subtitle,
             appBar: AppBar(),
           ),
           drawer: DrawerWidget(

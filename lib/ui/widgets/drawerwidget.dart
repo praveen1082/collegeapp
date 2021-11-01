@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:kcmitapp/UI/pages/attendancepage.dart';
-import 'package:kcmitapp/UI/pages/containerpage.dart';
-import 'package:kcmitapp/UI/pages/gallerypage.dart';
-import 'package:kcmitapp/UI/pages/home.dart';
-import 'package:kcmitapp/UI/pages/notice.dart';
-import 'package:kcmitapp/UI/pages/resources.dart';
-import 'package:kcmitapp/UI/pages/resultpage.dart';
+import 'package:kcmitapp/appicons.dart';
+import 'package:kcmitapp/ui/pages/attendancepage.dart';
+import 'package:kcmitapp/ui/pages/containerpage.dart';
+import 'package:kcmitapp/ui/pages/facultypage.dart';
+import 'package:kcmitapp/ui/pages/gallerypages/gallerypage.dart';
+import 'package:kcmitapp/ui/pages/home.dart';
+import 'package:kcmitapp/ui/pages/notice.dart';
+import 'package:kcmitapp/ui/pages/resources.dart';
+import 'package:kcmitapp/ui/pages/resultpage.dart';
+import 'package:kcmitapp/ui/widgets/optionwidget.dart';
 
 class DrawerWidget extends StatefulWidget {
   final select;
@@ -39,9 +42,16 @@ class _DrawerWidgetState extends State<DrawerWidget> {
             ),
           ),
           const ListTile(
-            leading: Icon(Icons.contact_page),
-            title: Text("Contact us"),
-          )
+            leading: Icon(
+              Icons.contact_page,
+              size: 25,
+            ),
+            title: Text("Contact us",
+                style: TextStyle(
+                    color: Colors.black45,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w500)),
+          ),
         ],
       ),
     );
@@ -130,19 +140,19 @@ Widget drawerMenu(int select) {
     "Logout"
   ];
   List icon = [
-    Icons.home,
-    Icons.new_releases_outlined,
-    Icons.home,
-    Icons.account_balance_rounded,
-    Icons.ac_unit,
-    Icons.home,
-    Icons.new_releases_outlined,
-    Icons.home,
-    Icons.account_balance_rounded,
-    Icons.ac_unit,
-    Icons.access_alarm_rounded,
-    Icons.accessibility_new_sharp,
-    Icons.contact_mail,
+    AppIcons.house_user,
+    AppIcons.pager,
+    AppIcons.download,
+    AppIcons.clipboard_check,
+    AppIcons.calendar_week,
+    AppIcons.photo_video,
+    AppIcons.blog,
+    AppIcons.user_tie,
+    AppIcons.clock,
+    AppIcons.comments,
+    AppIcons.clipboard_check,
+    AppIcons.readme,
+    AppIcons.sign_out_alt,
   ];
   return StatefulBuilder(builder: (context, setState) {
     return ListView.builder(
@@ -152,7 +162,7 @@ Widget drawerMenu(int select) {
       itemBuilder: (context, index) {
         return GestureDetector(
           child: Container(
-            padding: EdgeInsets.all(5.0),
+            padding: EdgeInsets.all(2.0),
             color: _selected == index ? Colors.grey[200] : Colors.white,
             child: Padding(
               padding: const EdgeInsets.all(10.0),
@@ -161,13 +171,18 @@ Widget drawerMenu(int select) {
                 children: [
                   Icon(
                     icon[index],
-                    size: 35,
+                    size: 25,
                     color: Colors.grey,
                   ),
                   const SizedBox(
-                    width: 20,
+                    width: 30,
                   ),
-                  Expanded(child: Text(drawerlist[index])),
+                  Expanded(
+                      child: Text(drawerlist[index],
+                          style: TextStyle(
+                              color: Colors.black45,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500))),
                 ],
               ),
             ),
@@ -206,6 +221,28 @@ Widget drawerMenu(int select) {
             } else if (index == 5 && _selected != 5) {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => GalleryPage()));
+            } else if (index == 7 && _selected != 7) {
+              Navigator.of(context).pop();
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => ContainerPage(
+                            page: FacultyPage(),
+                            selected: 7,
+                            title: "Faculty",
+                          )));
+            } else if (index == 8 && _selected != 8) {
+              Navigator.pop(context);
+              showAlertDialog(context);
+
+              // Navigator.push(
+              //     context,
+              //     MaterialPageRoute(
+              //         builder: (context) => ContainerPage(
+              //               title: drawerlist[index],
+              //               selected: 8,
+              //               page: showAlertDialog(context),
+              //             )));
             }
             setState(() {
               _selected = index;
